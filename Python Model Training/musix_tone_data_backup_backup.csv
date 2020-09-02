@@ -1,0 +1,485 @@
+Song,T-Anger,T-Fear,T-Joy,T-Sadness,T-Analytical,T-Confident,T-Tentative,Mood
+Impossible by The Clientele,0,0,0,0.574506,0.570598,0.939384,0,relaxed
+Love Is All by The Tallest Man on Earth,0,0,0,0,0,0,0,sad
+Silence Is Golden by Garbage,0,0.617185,0,0,0.876898,0,0.830009,angry
+And It Stoned Me by Van Morrison,0,0,0,0,0,0,0.903094,relaxed
+I'm On My Way by The Proclaimers,0,0,0.516311,0,0,0,0.527933,happy
+My Gun Go Off by 50 Cent,0,0,0,0,0,0,0.777243,angry
+Mamacita by Collie Buddz,0,0,0.860156,0,0,0.509802,0,happy
+Coming Home by Avenged Sevenfold,0,0,0,0,0.706763,0.840077,0,angry
+How Does It Feel by Avril Lavigne,0,0.590764,0,0.563847,0,0,0.906451,sad
+Never Went to Church by The Streets,0,0.713779,0,0,0,0,0.874805,sad
+Chuckie by Geto Boys,0.535248,0,0,0.503814,0,0,0.709824,angry
+September by David Sylvian,0,0,0.921137,0,0,0,0,relaxed
+The Tide Began To Rise by Demon Hunter,0,0,0,0.555579,0,0,0,sad
+Better Left Unsaid by Lily Holbrook,0,0,0,0.554562,0.858201,0,0.914329,sad
+Illusion by Creed,0,0,0,0.596446,0,0,0.982669,angry
+Matkustaja by Egotrippi,0,0,0,0,0,0,0,sad
+Don't Give Up by The Whitest Boy Alive,0,0,0,0,0.625997,0.537798,0,relaxed
+By the Pain I See in Others by Opeth,0,0,0,0.501566,0,0,0,sad
+Better Than This by Salt The Wound,0,0,0,0.633947,0,0.915914,0,angry
+Aces High by Iron Maiden,0.529016,0,0,0,0,0.648781,0,angry
+The Prettiest Thing by Norah Jones,0,0,0,0,0,0,0.930321,relaxed
+Written by Lamb,0,0,0.679344,0,0,0,0.887842,relaxed
+Rockstar by Nickleback,0,0,0,0,0,0,0,angry
+Megalodon by Mastodon,0,0,0,0,0,0,0.71572,angry
+No One Else by Natalie Walker,0,0,0.814276,0,0,0.895883,0,relaxed
+Country Love Song by Stephen Lynch,0,0,0.78108,0,0,0,0.698612,happy
+Bright Red Star by Stereophonics,0,0,0.811109,0,0.879823,0,0.841619,sad
+Can Can by Bad Manners,0,0,0.577511,0,0,0,0,happy
+Young by Hollywood Undead,0,0,0,0.720316,0,0.890804,0,angry
+The Magnificent Tree by Hooverphonic,0,0,0,0,0,0.88533,0,relaxed
+Quiet Place by Working for a Nuclear Free City,0,0,0.678263,0,0,0,0,relaxed
+Atlantic City by Bruce Springsteen,0,0,0,0,0,0,0,sad
+Invisible by Alison Moyet,0,0,0,0.540472,0.655196,0,0.911392,sad
+We Made You by Eminem,0,0.683257,0.55481,0.685004,0,0,0,happy
+I Hate The Way by Polly Scattergood,0.513942,0,0.579304,0.622238,0,0,0.82981,sad
+Wherever You Are by Ulrich Schnauss,0,0,0,0.770975,0,0,0,relaxed
+We Will All Go Together When We Go by Tom Lehrer,0,0,0,0.761902,0.857009,0.535153,0,happy
+The World Needs a Hero by Megadeth,0,0,0,0,0,0,0,sad
+Life Is A Pigsty by Morrissey,0.52122,0,0,0,0,0,0.886455,angry
+Agitated by Muse,0,0,0.561232,0,0,0.638212,0,sad
+Fields Of Gold by Fourplay,0,0,0,0,0,0.880065,0,angry
+Summer Nights by Rascal Flatts,0,0,0.665373,0,0,0,0,relaxed
+Adios Ayer by José Padilla,0,0,0.833663,0,0,0.545859,0,happy
+Jungle Drums by Emiliana Torrini,0,0,0.640213,0,0,0,0.770435,relaxed
+The Breeze by Dr. Dog,0,0,0.76576,0,0,0,0.698156,happy
+Bees & butterflies by Girls In Hawaii,0,0,0,0,0,0.65696,0,relaxed
+Dirge Inferno by Cradle of Filth,0,0.622199,0,0,0,0.950217,0,relaxed
+Big Big Love (Fig. 2) by Foals,0,0,0,0.558041,0,0,0,angry
+Welcome Home (Sanitarium) by Metallica,0,0,0.784464,0,0,0.598512,0,relaxed
+Little Bird by Imogen Heap,0,0,0,0,0,0,0,sad
+Do You Know How It Feels by The Flying Burrito Brothers,0,0,0,0.552725,0,0,0.881813,relaxed
+Easier by Grizzly Bear,0,0,0.611285,0,0.643758,0,0.920133,sad
+Sinners Like Me by Eric Church,0,0,0,0,0.966696,0,0,relaxed
+Roll On Down The Highway by Bachman-Turner Overdrive,0,0,0,0.621927,0,0,0.688854,relaxed
+Gimme All Your Lovin' by ZZ Top,0,0,0,0,0,0,0,happy
+War? by System of a Down,0,0,0.766131,0,0,0.938707,0,happy
+Feuer Frei! by Nachtmahr,0,0,0,0,0,0,0,angry
+Bali Ha'i by Stacey Kent,0,0,0,0,0.551743,0,0,angry
+You Belong With Me by Taylor Swift,0,0,0.697809,0,0,0,0.947419,relaxed
+Only Anarchists Are Pretty by The World/Inferno Friendship Society,0,0,0,0,0,0,0.733641,happy
+Like my very own blood by Tiger Lou,0,0,0,0.507391,0.715293,0,0.548855,happy
+Spiritual Law by Slayer,0,0,0.724724,0,0,0.792621,0,sad
+Stupid Girl by COLD,0,0,0,0,0,0.750888,0,angry
+Torn Blue Foam Couch by Grand Archives,0.7175,0,0,0,0,0,0,angry
+Turu Tu Tu... by Ania,0,0.552873,0,0,0,0.937689,0,relaxed
+"New York, New York by Reel Big Fish",0,0,0,0,0,0,0,sad
+Hot Girls In Love by Loverboy,0,0,0,0.521604,0,0.739476,0,happy
+Bullet Train by Judas Priest,0,0,0.829406,0,0,0.548588,0,happy
+The Wandering by The Foreshadowing,0,0,0,0,0,0.890603,0,angry
+Hurtful by Erik Hassle,0.675336,0,0,0,0,0,0.564885,sad
+Girls & Boys by Good Charlotte,0,0,0,0.701379,0,0,0,sad
+Before by Riverside,0,0,0.59494,0,0,0,0.675327,happy
+The One For You by Saybia,0,0,0,0.743111,0,0,0.925837,sad
+Bricks And Mortar by The Jam,0,0,0,0,0,0,0,sad
+The Divine Wings Of Tragedy by Symphony X,0,0,0.718013,0,0.606204,0,0.672523,angry
+Scentless Apprentice by Nirvana,0,0,0,0.90181,0,0,0,sad
+End Of The Run by Deborah Harry,0,0,0,0,0,0,0.948691,angry
+Man! I Feel Like A Woman! by Shania Twain,0,0.506981,0,0.552439,0.578094,0,0.916046,sad
+Mamma by Björn Rosenström,0,0,0.639173,0,0,0,0,happy
+The Boys Of Summer by The Ataris,0,0,0,0,0,0,0,happy
+U-Haul by Angie Stone,0,0,0.616308,0,0,0,0,happy
+Dirty Mind by The Pipettes,0,0,0,0.555323,0,0,0.762985,relaxed
+If The Lights Go Out by Katie Melua,0,0,0.671316,0,0,0,0.767326,happy
+My Old Man by Steve Goodman,0,0,0,0.518175,0.580964,0,0.70397,relaxed
+Deutschland (Has Gotta Die!) by Atari Teenage Riot,0,0,0,0.504725,0,0,0.518871,sad
+Sunday Bloody Sunday by U2,0,0,0,0.578129,0,0.645228,0,angry
+Lethal by Longing for Dawn,0,0,0,0.510971,0,0,0,angry
+Metal Militia by Metallica,0,0,0,0,0,0,0,sad
+Crazy Little Thing Called Love by Queen,0.670718,0,0,0,0,0,0,angry
+Psycho Killer by Talking Heads,0,0,0.847915,0,0,0,0,happy
+Lilacs by Matt Costa,0,0,0,0,0,0,0,angry
+I Like to Move It by Reel 2 Real,0,0,0,0,0,0.82652,0,relaxed
+Already Gone by Kelly Clarkson,0,0,0.722067,0,0,0,0.575603,happy
+You're My Thrill by Diana Krall,0,0,0,0.69133,0,0,0,sad
+We Don't Care by Kanye West,0,0,0.73298,0,0,0,0.893364,relaxed
+Tennessee Train Tracks by Rocky Votolato,0,0,0,0,0,0,0,happy
+A Conversation With God by Darren Hayes,0,0,0,0.515617,0,0,0.841118,relaxed
+"So Come Back, I Am Waiting by Okkervil River",0,0,0,0,0,0,0.664175,sad
+The Bad Touch by Bloodhound Gang,0,0,0,0,0,0,0,sad
+Dig by Mudvayne,0,0,0.64686,0,0,0,0.865388,happy
+Recipe for Hate...Warhorse by Megadeth,0,0,0,0,0,0,0,angry
+Unchained Melody by Peter Sellers,0,0.6026,0,0,0,0,0.868604,angry
+Can't Hardly Wait by The Replacements,0,0,0,0.57794,0,0,0,happy
+Coming Down Again by The Rolling Stones,0,0.519202,0,0,0,0,0.71572,sad
+Swing hum e meio by Móveis Coloniais de Acaju,0,0,0,0.601444,0,0.770765,0,sad
+The Enemy Inside by Dream Theater,0,0,0,0,0,0,0,happy
+Old Dirt Hill (Bring That Beat Back) by Dave Matthews Band,0,0,0,0.864031,0,0.693873,0,angry
+All My Heart Can Hold by Maggie Reilly,0,0,0,0,0,0.686032,0,relaxed
+Better People by Xavier Rudd,0,0,0,0.645687,0,0.7152,0,sad
+He Stopped Loving Her Today by George Jones,0,0,0.744781,0,0.753696,0,0.798695,relaxed
+Las Flores by Café Tacuba,0,0,0,0.585315,0.579604,0,0.579049,sad
+"They Do, They Don't by Jack Johnson",0,0,0,0,0,0,0,happy
+Crazy Mary by Pearl Jam,0,0,0,0,0,0,0.765774,relaxed
+Lady Sings The Blues by Billie Holiday,0,0,0,0.536876,0,0,0,sad
+Fall by The Saturdays,0,0,0,0.867772,0,0,0.706892,sad
+My Dearest Darling by Etta James,0,0,0,0,0.872181,0,0,sad
+Don't Stop Now by Guided by Voices,0,0,0.888502,0,0.734164,0,0.571918,happy
+Chinese Takeaway by The Adicts,0,0,0,0,0,0,0,sad
+Chega De Saudade by João Gilberto,0,0,0,0,0,0,0,happy
+The Boys Of Summer by DJ Sammy,0,0,0,0,0,0,0,relaxed
+For The Ladies by Stephen Lynch,0,0,0.578795,0,0,0,0,happy
+Things Can Only Get Better by Howard Jones,0,0,0.948845,0,0.624611,0,0,happy
+Crystal by New Order,0,0.706899,0,0,0,0.821633,0,happy
+We in Here by DMX,0.538302,0,0,0,0,0,0.742727,happy
+Ještě mi scházíš by Jaromír Nohavica,0.558169,0,0.511031,0.538728,0,0,0,angry
+Two Of Those Too (Album Version) by Maria Taylor,0,0,0,0,0,0,0,sad
+River Card by Atlas Sound,0,0,0.649552,0,0,0,0.949449,relaxed
+The Wake/Hooray Hooray by Tiger Lou,0,0,0,0.512005,0.724593,0.966751,0,relaxed
+Think Twice by Donald Byrd,0,0,0,0,0.53889,0,0,relaxed
+Touched Something's Hollow by of Montreal,0,0,0,0,0.526539,0,0.933633,relaxed
+Show A Little Faith by Charlotte Church,0,0,0,0,0,0,0,sad
+One Of Us Must Know (Sooner Or Later) by Bob Dylan,0,0,0,0.525236,0.655604,0.725496,0,relaxed
+Love Is Strange by Mickey & Sylvia,0,0,0,0.840939,0,0,0.848773,sad
+The Woman By The Well by Sarah Blasko,0,0,0.942804,0,0,0,0,happy
+Not Fair by Lily Allen,0,0,0,0.645181,0.918203,0,0.973513,relaxed
+Cherish The Day by Sade,0,0,0,0,0,0,0,happy
+It's A Pity by Tanya Stephens,0,0,0.524184,0,0,0,0,relaxed
+Sabbath Bloody Sabbath by Black Sabbath,0,0,0,0,0,0,0.645761,happy
+Flick of the Switch by AC/DC,0,0,0,0,0.590793,0.769606,0,angry
+It's Gonna Rain by Violent Femmes,0,0,0,0.591803,0,0.725237,0,angry
+Territory by Sepultura,0,0,0,0,0,0,0,happy
+That's My Job by Conway Twitty,0,0,0,0,0.77494,0,0,angry
+Police Story by Black Flag,0,0.534449,0,0.54805,0,0,0,sad
+Every Day Is Exactly The Same by Nine Inch Nails,0.743895,0,0,0,0,0.766185,0,angry
+Sometimes by Daniel Lanois,0,0,0,0,0,0,0,sad
+Love Is Like An Itching In My Heart by The Supremes,0,0,0,0.69091,0.693072,0,0.981587,relaxed
+Killamangiro by Babyshambles,0,0,0.580184,0,0.530786,0,0,happy
+Drowning by Stabbing Westward,0,0,0,0,0,0,0.620095,happy
+Save Your Scissors by City and Colour,0,0,0,0.646121,0,0,0.989962,sad
+Among the Living by Anthrax,0,0,0,0.54549,0,0,0.819646,relaxed
+War Zone by Slayer,0.559308,0,0,0,0,0,0,angry
+If Loving You Is Wrong by Cassandra Wilson,0,0,0,0,0.532292,0,0,angry
+An Ocean Between Us by As I Lay Dying,0,0,0,0.554403,0,0,0,relaxed
+Nightmare by Avenged Sevenfold,0,0,0,0.798728,0.544253,0,0,angry
+I Don't Like The Vibe In The VIP by ElectroVamp,0,0,0,0,0,0,0,angry
+Sludge Factory by Alice in Chains,0,0,0,0,0,0,0.685841,happy
+Psychotron by Megadeth,0,0,0.642989,0,0,0,0,sad
+Un Poco De Amor by Shakira,0.619769,0,0,0,0,0,0.911392,angry
+Oh My Lord by Nick Cave and the Bad Seeds,0,0,0.501107,0,0,0,0,happy
+Just Can't Last by Natalie Merchant,0,0,0,0,0,0,0.803972,sad
+Booksmart Devil by Silversun Pickups,0,0,0,0.812067,0.629823,0,0.973653,relaxed
+No Children by The Mountain Goats,0,0,0.560431,0,0,0,0.994704,relaxed
+If U Seek Amy by Britney Spears,0,0,0,0.507619,0,0,0.957631,sad
+Dragostea Din Tei by O-Zone,0,0,0.518526,0.506361,0,0,0,happy
+Suicide Solution by Ozzy Osbourne,0,0,0.661215,0,0,0,0,happy
+The Purple People Eater by Sheb Wooley,0,0,0,0,0,0,0,angry
+Ho Visto Un Re by Enzo Jannacci,0,0,0,0,0,0,0,happy
+Dread and the Fugitive Mind by Megadeth,0,0,0,0,0,0,0,happy
+Hope by Jack Johnson,0,0.555554,0,0,0.547016,0,0,angry
+More Than You Know by Jane Monheit,0,0.648581,0,0,0,0,0,relaxed
+How I Could Just Kill A Man by Rage Against the Machine,0,0,0.736355,0,0,0.59538,0,relaxed
+Fire by Jimi Hendrix Experience,0,0,0,0,0,0,0,angry
+I Wanna Be Loved By You by Marilyn Monroe,0,0,0,0,0,0,0,angry
+Distant Lights by Burial,0,0,0.751044,0,0,0,0.870105,happy
+Sadness Is a Blessing by Lykke Li,0,0,0,0,0,0,0,sad
+I Told You So by Carrie Underwood,0,0,0,0.877859,0,0,0,sad
+Lights by Scissor Sisters,0,0,0,0.783532,0,0,0.698156,sad
+Will You Marry Me by Lenny Kravitz,0,0,0,0,0,0,0,happy
+The Needle Lies by Queensryche,0,0,0.767936,0,0,0,0,happy
+The Cry of Mankind by My Dying Bride,0,0.862703,0,0,0,0.512251,0,angry
+7 Things by Miley Cyrus,0,0,0,0,0,0,0.808202,sad
+Vaca que cambia de querencia by Juana Molina,0,0,0,0.608472,0,0,0.878342,happy
+If You're Not Scared by K's Choice,0,0,0,0,0,0,0,relaxed
+Sunworshipper by Mylo,0,0,0,0.787716,0,0,0.606057,sad
+Singin' In The Rain by Jamie Cullum,0,0,0,0,0,0.898523,0,relaxed
+I Am the Fly by Wire,0,0,0.905524,0,0,0,0.698156,relaxed
+Livin' La Vida Loca by Ricky Martin,0,0,0,0,0.51064,0,0.865388,angry
+Limo Wreck by Soundgarden,0,0,0.541643,0,0,0,0,happy
+Bitter Sweet by Sopor Aeternus & The Ensemble Of Shadows,0,0,0,0.555273,0,0,0,sad
+Nosferatu by Blue Öyster Cult,0,0,0,0.811253,0,0.922197,0,sad
+My Evil Plan To Save The World by Five Iron Frenzy,0,0.781765,0,0,0,0.641705,0,angry
+I Know It's True but I'm Sorry to Say by Violent Femmes,0,0,0,0,0,0.722398,0,happy
+Kielbasa by Tenacious D,0,0,0.766288,0,0.686385,0,0.698156,sad
+Sleepers by Saosin,0.552327,0,0.606623,0,0,0,0,happy
+Potters Field by Anthrax,0,0,0,0,0,0.722398,0,angry
+Little Bombs by Aimee Mann,0,0,0,0.606038,0,0,0,angry
+The Red by Chevelle,0,0,0,0,0,0,0.872927,sad
+Blue Sky by Jason Collett,0,0.673746,0,0,0,0.6633,0,angry
+All My Friends (John Cale's Version) by LCD Soundsystem,0,0,0,0.727338,0,0,0,relaxed
+Bushes And Briars by Sandy Denny,0,0,0,0,0,0,0,sad
+Punk Rock Superstar by Marcy Playground,0,0,0.597773,0,0,0,0.626556,sad
+Le Vieil Amant by Emilie Simon,0,0,0.659752,0,0,0,0,happy
+Your Master Is Calling by Pink Turns Blue,0,0,0,0,0,0,0,relaxed
+Clear My Head by IVY,0,0,0,0,0,0,0,sad
+American Girl by Tom Petty And The Heartbreakers,0,0,0,0.729179,0.916623,0.876563,0,relaxed
+A Sunday Kind Of Love by Etta James,0,0,0,0,0,0,0,happy
+Lonely This Christmas by Mud,0,0,0.687034,0,0,0,0.973205,relaxed
+Everybody Knows That You Are Insane by Queens Of The Stone Age,0,0,0,0.933394,0,0,0,sad
+These Good People by The Gathering,0,0,0,0.572358,0,0,0.80186,angry
+Cuntry Boys & City Girls by The Fratellis,0,0,0,0,0.668742,0.859164,0,sad
+Puto by Molotov,0,0,0,0,0,0,0.942187,happy
+I Wish by Victoria Beckham,0,0,0,0,0,0,0,happy
+Dizzy by Ours,0,0.505691,0,0.551026,0,0,0.69854,happy
+Walking In Rhythm by The Blackbyrds,0,0,0,0.517165,0.520612,0,0.655928,sad
+Velvet Revolution by Tori Amos,0,0,0.643379,0,0,0,0.779803,happy
+Break on Through (To the Other Side) by Doors,0,0,0,0.769315,0.963306,0,0.50589,sad
+FFF by Megadeth,0,0,0,0,0,0,0,angry
+Good Guys & Bad Guys by Camper Van Beethoven,0,0,0,0.669753,0,0,0,angry
+Spirit in Black by Slayer,0,0,0,0,0,0,0,happy
+Keep In Touch by theaudience,0,0,0.535821,0,0,0,0.810645,angry
+Roy Walker by Belle and Sebastian,0,0.571867,0,0,0,0,0.925029,relaxed
+As the Palaces Burn by Lamb of God,0,0,0.718999,0,0,0,0.68097,happy
+Personality Crisis by New York Dolls,0,0,0,0,0,0,0,angry
+Unanswered by Suicide Silence,0,0,0,0,0,0,0.589934,angry
+It's That Time Again by The Dodos,0.663002,0,0,0,0,0.752665,0,angry
+Deliver Me From Mine Enemies by Diamanda Galás,0,0,0,0.555847,0,0,0,sad
+We're Going Wrong by Cream,0,0,0,0,0,0,0,angry
+Edge of the Ocean by IVY,0,0,0,0.687722,0,0,0.770435,sad
+Your Pretty Face Is Going to Hell by The Stooges,0,0,0.658496,0,0,0,0,relaxed
+Worried Eyes by Eagle-Eye Cherry,0,0,0,0,0,0.52563,0,angry
+It's Over by Bic Runga,0,0,0,0.846082,0.747663,0,0.827288,relaxed
+Poetically Pathetic (Acoustic) by Amber Pacific,0,0,0.626436,0,0.738651,0,0.949952,sad
+Lovely 2 C U by Goldfrapp,0,0,0.709218,0,0.7339,0,0.791927,sad
+"The Night Santa Went Crazy by ""Weird Al"" Yankovic",0,0,0.859642,0,0,0,0,happy
+Are We Still Married? by His Name Is Alive,0,0,0,0,0,0.659623,0,happy
+Simarik by Tarkan,0,0,0,0,0,0,0.966403,sad
+Nada Valgo Sin Tu Amor by Juanes,0,0,0,0,0,0,0,happy
+"Kick, Push by Lupe Fiasco",0,0,0,0,0,0,0,happy
+Thank You Very Much by Kaiser Chiefs,0,0,0.648954,0,0,0,0.761129,relaxed
+Counting Backwards by Throwing Muses,0,0,0.777539,0,0.825432,0,0.751891,happy
+Future Breed Machine by Meshuggah,0,0,0,0.638218,0.747663,0,0,angry
+I Luv It by Young Jeezy,0,0,0,0,0,0,0,angry
+Burn by Three Days Grace,0,0,0,0.672037,0,0,0.762676,angry
+Bring the Noise by Public Enemy,0.502694,0,0,0,0,0,0,angry
+Monday Morning by Maria Mena,0.530655,0,0.521095,0,0,0.589192,0,angry
+The Wrong Nigga to Fuck Wit by Ice Cube,0,0,0,0.764714,0,0,0,relaxed
+Am I Inside by Alice in Chains,0.684511,0,0,0,0,0,0,angry
+Sandy the River Demon by Monkey,0,0,0,0.765522,0,0,0,sad
+Ghostbusters by Ray Parker Jr.,0,0,0,0,0,0,0.817737,relaxed
+Hate Me! by Children of Bodom,0,0,0,0,0,0,0,happy
+Olhos Certos by Detonautas Roque Clube,0,0,0,0.623791,0,0,0.612385,angry
+Gigantic by Pixies,0,0,0,0,0,0,0,sad
+Day by Katatonia,0,0,0.676753,0,0,0.667008,0,happy
+Painter in Your Pocket by Destroyer,0,0,0.577524,0,0,0.502568,0,sad
+Belle de Jour by De-Phazz,0,0,0.564557,0.698631,0,0,0.839217,relaxed
+Never Be the Sun by Dolores Keane,0,0,0,0,0,0,0.947419,relaxed
+Bring the Pain by Method Man,0,0,0.704626,0,0,0,0.959929,relaxed
+Those Three Days by Lucinda Williams,0.720274,0,0,0,0,0,0,angry
+Moto Psycho by Megadeth,0,0,0,0,0,0,0,sad
+Touch Down by Delays,0,0,0,0,0,0,0.635753,angry
+Laura by Scissor Sisters,0,0,0,0,0.885448,0,0.798695,relaxed
+I Like You So Much Better When You're Naked by Ida Maria,0,0,0,0,0,0,0.80186,happy
+Lovesongs (They Kill Me) by Cinema Bizarre,0,0,0,0,0,0,0.568389,happy
+Leave My Mind by Lene Marlin,0,0,0,0,0,0,0,sad
+You Got By by Sara Gazarek,0,0,0,0.569868,0.596122,0.87984,0,relaxed
+Walk Believer Walk by The Black Crowes,0,0,0,0,0,0,0.849567,relaxed
+Thank You (Falettinme Be Mice Elf Agin) by Sly & The Family Stone,0,0,0,0,0,0,0.600641,happy
+The Lonely by British Sea Power,0,0,0.541905,0,0,0,0,happy
+Autumn Tactics by Chicane,0,0.596072,0,0,0,0.906441,0,sad
+Under the Gun by The Sisters Of Mercy,0,0,0.698724,0,0,0,0.89793,relaxed
+Get Myself on Track by Audio Bullys,0,0,0.863213,0,0,0,0,sad
+The Sleep of No Dreaming by Porcupine Tree,0,0,0,0,0,0,0,sad
+Lazy Girls by Jill Cunniff,0,0,0,0,0,0,0.808202,sad
+Newgrange by Clannad,0,0,0.60412,0,0,0,0.60858,happy
+Jackie Jackson by Franz Ferdinand,0,0,0,0,0,0,0,relaxed
+The Corps Under My Bed by Combichrist,0,0,0.508206,0,0,0,0.647781,happy
+Should've Known Better by Richard Marx,0.616706,0,0,0,0,0,0,sad
+Want by The Cure,0,0,0,0,0,0,0,sad
+I'm on a Boat (feat. T-Pain) by The Lonely Island,0,0,0.647063,0,0,0.701849,0,sad
+Faithful  by Common,0.57235,0,0,0,0,0,0,happy
+This Place Hotel by The Jacksons,0,0,0.651019,0,0,0,0,relaxed
+Dirge for November by Opeth,0,0,0.631403,0,0.601256,0,0,sad
+It's A Long Way There by Little River Band,0,0,0,0.766627,0,0.952663,0,sad
+11:11 by Rufus Wainwright,0,0,0,0,0,0,0.968739,relaxed
+Break The Ice by Britney Spears,0,0,0,0.505623,0,0,0,relaxed
+Midnight Blue by Electric Light Orchestra,0,0,0,0,0,0,0.671324,happy
+We're Not Deep by The Housemartins,0,0,0,0.816119,0,0,0,relaxed
+Disguise by Lene Marlin,0,0,0,0,0.767471,0,0.7473,happy
+One Step Too Far by Faithless,0,0,0,0,0,0,0,relaxed
+Day One: Vigil by Ayreon,0,0,0,0,0,0,0.937317,relaxed
+Catch The Rainbow by Rainbow,0,0,0,0.570681,0,0,0,relaxed
+Greenville by Lucinda Williams,0,0,0,0.564595,0,0,0.908434,sad
+Heart And Shoulder by Heather Nova,0,0,0.828141,0,0,0,0.840028,sad
+Long Stick Goes Boom by Krokus,0,0,0,0,0,0,0.770435,sad
+"Mahna, Mahna by Cake",0,0,0,0.790061,0,0,0.724637,relaxed
+Sweet Darlin' by She & Him,0,0,0,0,0,0.522234,0,angry
+Vietnow by Rage Against the Machine,0,0,0,0,0,0,0,happy
+Action by Powerman 5000,0,0,0,0.512496,0,0,0.781683,happy
+All For Swinging You Around by The New Pornographers,0,0,0,0,0,0,0,angry
+Sleep Now In The Fire by Rage Against the Machine,0,0,0.52937,0,0,0,0.95408,angry
+And I'm Evil by Beatallica,0,0,0,0.518739,0.873713,0,0,happy
+Chi by Korn,0,0,0,0,0,0,0,angry
+Neon Moon by Brooks & Dunn,0.709518,0,0,0,0,0,0.733641,happy
+A Dream About You by Keri Noble,0,0,0,0.743478,0,0.624531,0,angry
+Around The World by Aqua,0,0,0,0.730222,0.664447,0.73229,0,sad
+Evil Urges by My Morning Jacket,0,0,0,0.749115,0.51064,0,0.71572,relaxed
+Nothing Much to Lose by My Bloody Valentine,0,0,0.777893,0,0,0,0.664175,happy
+Wake Up by Rage Against the Machine,0,0,0,0,0,0,0.947929,happy
+Chop Suey! by System of a Down,0,0,0.532833,0,0,0,0,sad
+The Freak Show by Antimatter,0,0,0,0,0,0,0,angry
+Omen Sore by ERA,0,0.544894,0,0.698721,0,0,0,angry
+When I Get Where I'm Going by Brad Paisley,0,0,0.671339,0,0,0.559726,0,sad
+Victory by Megadeth,0,0.571288,0,0,0,0,0,relaxed
+The Not Knowing by Tindersticks,0,0,0.671823,0.662054,0,0,0.51835,sad
+My Baby Does Me by Queen,0,0,0,0.535245,0,0,0.850625,angry
+Morning Glory by Tim Buckley,0,0,0.651483,0,0,0,0.874805,sad
+Black Light District by The Gathering,0,0,0.832594,0,0.681506,0,0,happy
+Can You Hear The Music by The Rolling Stones,0,0.8352,0,0,0,0,0.917243,sad
+Reminiscing by Little River Band,0,0,0,0.84885,0,0,0,sad
+Dead and Buried by Alien Sex Fiend,0,0,0.754262,0,0,0,0.931982,sad
+Sway by Voxtrot,0,0,0.532753,0,0,0,0,relaxed
+Homebird by Foy Vance,0,0,0,0.557401,0,0,0,angry
+Rain Song by COLD,0,0,0,0.81482,0,0,0.50589,sad
+Cruel Summer by Bananarama,0,0,0.534761,0,0,0,0.658666,relaxed
+Still in Love by Nick Cave and the Bad Seeds,0,0,0,0.624501,0,0.939867,0,sad
+Papi by Jennifer Lopez,0,0,0,0.578234,0,0,0.658666,happy
+Anorak Christmas by Sally Shapiro,0,0,0,0,0,0,0.953578,sad
+Fun Fun Fun by Busted,0,0,0.85563,0,0.701671,0.820205,0,happy
+Sex. Murder. Art. by Slayer,0,0,0,0,0,0.56543,0,relaxed
+4 Words (To Choke Upon) by Bullet For My Valentine,0,0,0.695394,0,0,0,0.761129,happy
+Lovestain by José González,0,0,0.539229,0,0,0,0,angry
+I Would Like To Call It Beauty by Corinne Bailey Rae,0,0,0,0.532294,0.964507,0.502153,0,angry
+Meadow by Espers,0,0,0,0.672659,0,0,0,relaxed
+London Calling by The Clash,0,0,0.708109,0,0,0,0,relaxed
+Orgasmatron by Motörhead,0,0,0,0,0.53889,0,0.616216,relaxed
+Back To Manhattan by Norah Jones,0,0,0,0,0.620534,0,0,angry
+If You Know Love by Molly Johnson,0,0,0,0,0,0.59538,0,angry
+Ophelia by The Tear Garden,0,0,0,0,0.747663,0,0.539798,sad
+Letter To God by Hole,0,0,0.853508,0,0.793256,0,0,relaxed
+Washington Is Next! by Megadeth,0,0,0.709503,0,0,0,0.898839,sad
+Flora's Secret by Enya,0,0,0,0.702786,0,0,0,sad
+Sex Dwarf by Soft Cell,0.586186,0,0,0,0,0,0.619299,angry
+I Only Want To Be With You by Dusty Springfield,0,0,0.704321,0,0,0,0,relaxed
+Mea Culpa by Enigma,0,0,0.561492,0,0,0,0,happy
+Sun (acoustic) by Mae,0,0,0.550773,0,0,0,0.60858,happy
+Highway to Hell by AC/DC,0,0,0.566594,0,0,0,0,relaxed
+I Still Get Jealous by Louis Armstrong,0,0,0.576126,0.554794,0.526692,0,0.921459,relaxed
+Beauty And The Beast by Jump5,0.587346,0,0,0,0,0,0,angry
+Flowery Noontide by Espers,0,0,0,0.542437,0.61788,0,0,relaxed
+Your Touch by The Black Keys,0,0,0.774696,0,0,0,0.50589,happy
+Elvis Presley and America by U2,0.660873,0,0,0,0,0,0.978371,relaxed
+Without You by Dixie Chicks,0,0,0,0,0,0,0,happy
+Take Your Mama by Scissor Sisters,0,0,0.630648,0,0.567613,0,0.555203,sad
+7 Minutes by Noir Désir,0,0,0,0.877994,0,0,0,sad
+Fitter Happier by Radiohead,0,0,0.669347,0,0,0,0.718259,happy
+Fields Of Gray by Bruce Hornsby,0,0,0.56582,0,0,0,0.601046,angry
+St. Robinson In His Cadillac Dream by Counting Crows,0,0,0.654734,0,0.7162,0.740925,0,sad
+Verne by Novembre,0,0,0,0.790757,0,0,0.774175,relaxed
+Love and Destroy by Franz Ferdinand,0,0,0,0,0,0,0,relaxed
+Rinse by Vanessa Carlton,0,0,0,0,0,0,0,sad
+I Don't Wanna Die Anymore by New Radicals,0,0,0,0.742184,0,0,0,happy
+This Town by Hot Hot Heat,0,0,0,0.533144,0.759706,0.704539,0,sad
+Back Into Your System by Saliva,0,0,0,0.778849,0,0,0,sad
+End by Secondhand Serenade,0,0,0,0,0,0,0,happy
+In The Mood by Robert Plant,0,0,0.547669,0,0,0.871321,0,relaxed
+Man Must Dance by Johnossi,0,0,0,0,0,0,0,sad
+Cish Cash  by Basement Jaxx,0,0,0.73576,0,0,0,0,relaxed
+Don't Turn Around by Ace of Base,0,0,0.640959,0,0,0,0.839232,happy
+High School by Nerf Herder,0,0,0,0,0,0,0,relaxed
+Steamy Windows by Tina Turner,0,0,0,0,0,0.857199,0,happy
+Slowboat by Sparks,0,0,0,0.710897,0,0,0.912195,happy
+A Modern Way Of Letting Go by Idlewild,0.599976,0,0,0,0.693298,0,0.642407,happy
+My Funny Valentine by Anita Baker,0,0,0.615184,0,0.607307,0,0,happy
+Des Illusions by Dark Sanctuary,0,0,0,0.604781,0,0,0.822511,sad
+Lightning by Eric Church,0,0,0,0,0.935542,0,0,angry
+Less Than a Pearl by Enya,0,0,0.94063,0,0,0,0,relaxed
+Take Up Thy Stethoscope and Walk by Pink Floyd,0,0,0,0,0,0,0,sad
+Dolphins by Tim Buckley,0,0,0,0,0,0,0,sad
+Paranoiattack by The Faint,0,0,0,0,0,0,0,relaxed
+Countdown to Extinction by Megadeth,0,0,0,0,0,0,0,angry
+Keeping You by Tanya Donelly,0,0,0,0,0.919926,0,0.924421,sad
+The Figurehead by The Cure,0,0.557348,0,0,0,0.78945,0,happy
+Mickey by Toni Basil,0.556063,0,0,0,0.568833,0.693873,0,angry
+"Cheer Up, Boys (Your Make Up Is Running) by Foo Fighters",0,0,0,0.648511,0.88217,0,0,relaxed
+Ghetto Vet by Ice Cube,0,0.559874,0,0,0,0,0,sad
+Necrophiliac by Slayer,0,0,0,0,0,0,0,happy
+Sleepsong by Secret Garden,0,0,0,0.587868,0,0,0,happy
+Prisoners of Today by Billy Talent,0.609555,0,0,0,0,0,0,angry
+Brand New Day by Sting,0,0,0,0,0,0,0.71572,angry
+Psychopathy Red by Slayer,0,0,0.826998,0,0,0,0.631794,relaxed
+You Belong To Me by Anita Baker,0,0,0,0.740879,0,0,0.677579,angry
+Pocket by Sam Sparro,0,0,0,0.691096,0,0,0,happy
+Le Ciel Dans Une Chambre by Carla Bruni,0,0.668358,0,0,0,0.794212,0,angry
+Tone Poem by Fischerspooner,0,0,0.529495,0,0,0.914714,0,relaxed
+Foxtrot Uniform Charlie Kilo by Bloodhound Gang,0,0,0,0,0,0,0.925484,happy
+One Hundred Years by The Cure,0,0,0,0,0,0,0,relaxed
+Gone With The Day by Faunts,0,0,0,0,0,0,0,relaxed
+Celebration by Kool & The Gang,0,0,0,0.530165,0,0,0,happy
+Super-Charger Heaven by White Zombie,0,0.655507,0,0,0,0,0.635753,sad
+Thank You For The Music by Abba,0,0.597189,0,0.525098,0,0,0,relaxed
+Durch die Nacht by Silbermond,0,0,0.642611,0,0,0,0,happy
+The Visit (She Was Here) by The Cyrkle,0,0,0.560402,0,0,0,0.684404,angry
+Fury by Prince,0,0,0.958815,0,0,0.57416,0,happy
+Baby Be Brave (album version) by The Corrs,0,0,0,0,0,0,0,sad
+Overjoyed by Magnet,0,0,0.548007,0,0.584719,0,0.833659,relaxed
+A Place In The Dirt by Marilyn Manson,0,0,0,0,0,0,0.776674,angry
+Skies So Blue by The Rocket Summer,0,0.622935,0,0,0,0,0,relaxed
+The Fear by Pulp,0,0,0,0,0.650284,0,0,relaxed
+Goodbye Suicide by Nicky Wire,0,0,0,0,0,0.761642,0,sad
+Gather Me Up Forever by My Dying Bride,0,0,0.707483,0.55959,0,0,0.730029,happy
+Let's Get Known by The Unicorns,0,0.852055,0,0,0,0,0.920133,sad
+Take Me For A Little While by Coverdale/Page,0,0,0,0.946023,0,0,0,sad
+It's Not The Fall That Hurts by Caesars,0,0,0,0.788682,0,0,0.586281,sad
+Something Beautiful by Newsboys,0,0,0,0,0.903856,0,0.50589,happy
+Pi by Hard 'n Phirm,0,0,0.597117,0,0.558477,0,0,sad
+Bulls on Parade by Rage Against the Machine,0,0,0,0.619485,0,0,0,happy
+A Doomed Lover by My Dying Bride,0,0,0.65009,0,0,0,0.929579,happy
+Marie Cherie by Annie,0,0,0,0,0,0.828525,0,happy
+Sex im Hotel by Rosenstolz,0,0,0,0,0,0,0,angry
+Let Love by Res,0,0.532711,0,0.661683,0,0,0,sad
+The Invisible Man by Marillion,0,0,0,0,0.647919,0,0.637078,sad
+66 by Afghan Whigs,0,0,0,0,0,0,0,happy
+Shell by Susie Suh,0,0,0,0,0,0,0,happy
+Not the Same by Dinosaur Jr.,0,0,0.648116,0,0,0,0.900953,relaxed
+I'm Gonna Getcha Good! by Shania Twain,0,0,0,0,0,0,0,sad
+Part-Time Lover by Stevie Wonder,0,0,0,0,0,0,0.616216,happy
+Tahroja paperilla by Eppu Normaali,0,0,0,0.674308,0,0,0,relaxed
+Battery by Metallica,0,0,0,0.573852,0,0,0.776674,sad
+Son by Juana Molina,0,0,0.708898,0,0,0,0,happy
+Your Only Doll (Dora) by Laura Marling,0,0,0.666287,0,0.777594,0,0.71572,happy
+Joy To The World by Three Dog Night,0,0,0,0,0,0,0,sad
+I Just Wanna Love U (Give It 2 Me) by JAY-Z,0,0,0,0.752273,0.596122,0.880065,0,angry
+To The Music by Colder,0,0,0,0,0,0,0,relaxed
+English Girl by Eagles of Death Metal,0.524287,0,0,0,0,0,0,relaxed
+Jump by Kris Kross,0,0,0.862022,0,0,0.802874,0,happy
+Teen Angel by Mark Dinning,0,0,0.559856,0,0,0,0,happy
+Girls Just Want To Have Fun by Starfucker,0,0,0.792212,0,0,0,0.616216,happy
+"Christmas At Ground Zero by ""Weird Al"" Yankovic",0,0,0,0,0,0,0.896412,happy
+Johnny W. by Marius Müller-Westernhagen,0,0,0,0,0,0,0,happy
+Demolishor by The Acacia Strain,0,0,0.566267,0,0,0,0,sad
+Assimilate by Skinny Puppy,0,0,0.601936,0,0,0,0.811378,happy
+Me Ves Y Sufres by Hope of the States,0,0,0.507771,0,0,0,0,happy
+Nebel by Rammstein,0,0,0,0,0,0,0,sad
+My Doorbell by The White Stripes,0,0,0,0,0,0,0.949952,angry
+Down Payment Blues by AC/DC,0,0,0,0,0,0,0.852741,angry
+Utopia by Goldfrapp,0.544238,0,0.533268,0.623386,0,0,0.871674,sad
+Your Emotions by Dead Kennedys,0,0,0,0,0,0,0,sad
+Angel Eyes by Jim Brickman,0,0,0,0,0,0,0.768569,happy
+For You by Sarah Blasko,0,0,0,0,0.574579,0,0,angry
+Je Veux Te Voir (Club-Club Version) by Yelle,0,0,0,0.564522,0.681506,0,0.958239,relaxed
+Rip The Heart Out Of Me by Adema,0,0,0,0.528381,0.61361,0,0,angry
+When I Look In Your Eyes by The Romantics,0,0,0,0,0,0,0,relaxed
+Dead in Hollywood by Murderdolls,0,0,0.536557,0,0,0,0.896412,relaxed
+(I Can't Get No) Satisfaction by Devo,0,0,0,0,0,0,0,happy
+Exploited Barmy Army by Exploited,0.585021,0,0,0.508278,0,0,0.692385,angry
+Somebody by Midge Ure,0,0,0.666897,0,0,0,0,happy
+Remember Me by Qntal,0.589337,0,0,0,0,0.697844,0,angry
+Gotta Serve Somebody by Bob Dylan,0,0,0,0,0,0,0,angry
+Nothing Going On by Clawfinger,0,0,0,0,0,0,0,angry
+Sweeter Love by Blue Six,0,0,0,0.843639,0.765814,0,0.966403,sad
+Let It Flow by Spiritualized,0,0,0,0,0.952933,0,0,sad
+You Burn First by Alexisonfire,0,0,0,0,0,0,0.994017,relaxed
+Dirty Mack by Ice Cube,0,0,0.816416,0,0,0,0,angry
+Time for Livin' by Beastie Boys,0,0,0.926814,0,0.736354,0,0.896412,relaxed
+"Sinister in a State of Hope by Loney, dear",0,0,0,0,0.720783,0,0,relaxed
+Squeeze Me by Kraak & Smaak,0.614347,0,0,0,0.929739,0,0.797093,angry
+Kiss Off by Violent Femmes,0.694448,0,0,0,0,0,0.647781,angry
+Shelter For My Soul by Bernard Fanning,0,0,0,0,0,0.680879,0,angry
+Morph The Cat by Donald Fagen,0,0,0.580424,0,0.612186,0,0.952443,relaxed
+Depression by Black Flag,0,0,0,0,0,0.532529,0,happy
+Sweet Talkin' Woman by Electric Light Orchestra,0,0.608386,0,0.505243,0,0,0,angry
+Nasty Girl by Vanity 6,0,0,0.747794,0,0,0.79901,0,sad
+Swim by In Flames,0,0,0,0,0,0,0,relaxed
+Constellations by Jack Johnson,0,0,0,0.854337,0,0.571226,0,angry
+Bright by Low,0,0,0,0.506302,0,0,0.71572,happy
+Baby by Stephen Lynch,0,0,0,0,0,0,0.597317,happy
+Hey Dude by Beatallica,0,0,0.628462,0,0.870108,0,0,happy
+Palestina by Ministry,0,0,0,0,0,0,0,happy
+You'd Be Surprised by Marilyn Monroe,0,0,0.808116,0,0,0,0.936899,relaxed
+"No Mirror, No Shadow by New Model Army",0,0,0,0,0,0,0,sad
+Sly by The Cat Empire,0,0,0.581735,0,0,0,0.553381,happy
+The Living Sea by Monkey,0,0,0.592201,0,0,0,0,happy
+I'd Rather by Luther Vandross,0,0,0.640881,0,0,0.890603,0,angry
+O Pomar Das Laranjeiras by Madredeus,0,0,0,0,0,0,0,happy

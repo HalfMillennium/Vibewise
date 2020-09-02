@@ -5,7 +5,7 @@ function getData(id) {
 
     $.get({url: '/getdata', headers: {"Authorization": `Bearer ${token}`}}, function(data) {
         // "Data" is the array of track objects we get from the API. See server.js for the function that returns it.
-        console.log("id");
+        //console.log(id);
 
         //var login_info = document.getElementById("login_jumb");
         //login_info.style.display = "none";
