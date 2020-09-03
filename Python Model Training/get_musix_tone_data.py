@@ -22,10 +22,10 @@ all_lyric_object = []
 all_lyric_tones = []
 
 # MusixMatch API
-musixmatch = Musixmatch('3dbbf7d593f0f05ab045dac7b015c430')
+musixmatch = Musixmatch('')
 
 # Tone Analyzer API
-authenticator = IAMAuthenticator('R7Ja2rP0jp6LucFzOl5-4xbMSVSX5Fci8wc63J0O5-l3')
+authenticator = IAMAuthenticator('')
 tone_analyzer = ToneAnalyzerV3(
     version='2017-09-21',
     authenticator=authenticator

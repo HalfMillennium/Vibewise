@@ -11,9 +11,9 @@ from musixmatch import Musixmatch
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
-os.environ["SPOTIPY_CLIENT_ID"] = '9013dc5d86b84ffca62df2f22e00968e'
-os.environ["SPOTIPY_CLIENT_SECRET"] = 'b9484118ab374707925b1b15100cc58b'
-os.environ["SPOTIPY_REDIRECT_URI"] = 'https://github.com/HalfMillennium'
+os.environ["SPOTIPY_CLIENT_ID"] = ''
+os.environ["SPOTIPY_CLIENT_SECRET"] = ''
+os.environ["SPOTIPY_REDIRECT_URI"] = ''
 
 scope = "user-library-read"
 
