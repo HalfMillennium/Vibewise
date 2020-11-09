@@ -10,9 +10,7 @@ from flask import Flask, jsonify, request
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import grab_spotify_data as gr
 
-os.environ["SPOTIPY_CLIENT_ID"] = '9013dc5d86b84ffca62df2f22e00968e'
-os.environ["SPOTIPY_CLIENT_SECRET"] = 'b9484118ab374707925b1b15100cc58b'
-os.environ["SPOTIPY_REDIRECT_URI"] = 'https://github.com/HalfMillennium'
+
 
 app = Flask(__name__)
 
