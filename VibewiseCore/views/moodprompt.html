@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vibewise | The Mood Matcher</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body class="bg-black">
+    <!--
+    <header>
+      <h1>
+        Spotify Authorization Code Flow
+      </h1>
+    </header> -->
+
+    <div class="row h-100 justify-content-center align-items-center">
+      <!--<button class="btn btn-primary" id="login">Don't see anything? Log in!</button>-->
+      <div id="data-container" class="text-center">
+        <div class="container">
+            <div class="jumbotron text-center text-white bg-black" id="mood_jumb">
+                <h1 class="display-4">What's your vibe right now?</h1>
+                <h3 style="color: #f55d42">Choose a descriptive word.</h3>
+                <br><br>
+                <input type="text" class="form-control" id="moodInput" placeholder="Type it in...">
+                <br>
+                <button class="btn btn-outline-light" id="submit-mood">Listen</button>
+              </div>
+          </div>
+        </div>
+        <ul>
+          <!-- This is where we will append our data -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

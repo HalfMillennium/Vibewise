@@ -1,0 +1,48 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify Authorization Code Flow Example</title>
+    <meta name="description" content="OAuth 2 Authorization Code Flow example for Spotify.">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/project-avatar/b96c147f-8065-40a6-9908-4fcafce2a361.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body class="bg-black">
+    <!--
+    <header>
+      <h1>
+        Spotify Authorization Code Flow
+      </h1>
+    </header> -->
+
+    <div class="row h-100 justify-content-center align-items-center">
+      <!--<button class="btn btn-primary" id="login">Don't see anything? Log in!</button>-->
+      <div id="data-container" class="text-center">
+        <div class="container">
+          <div class="jumbotron text-center bg-black" id="login_jumb">
+            <h1 class="display-4 text-white">Let's get started.</h1>
+            <button class="btn btn-success button-pad" id="login">Connect with Spotify</button>
+          </div>
+        </div>
+        <ul>
+          <!-- This is where we will append our data -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+    <script src="/retrieve-data.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

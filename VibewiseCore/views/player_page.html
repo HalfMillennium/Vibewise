@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vibewise | The Mood Matcher</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/player_page_style.css">
+    <link rel="stylesheet" href="/gradient-bg-style.css">
+  </head>
+  <body class="grad-bg">
+    <div class="h-100 justify-content-center align-items-center">
+      <!--<button class="btn btn-primary" id="login">Don't see anything? Log in!</button>-->
+      <div id="data-container" class="text-center">
+        <div class="container">
+            <div class="jumbotron bg-trans" id="flex-container">
+              <div id="album-cover" class="card">
+                <img src="https://via.placeholder.com/500" class="rounded">
+              </div>
+              <div id="song-q" class="card border-0">
+                <!--<img src="https://via.placeholder.com/500" class="rounded">-->
+                <div class="card-header bg-card-trans">
+                  <h1 class="display-4">Just chill out...</h1>
+                  <small>Relax for a bit.</small>
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#current-vibe">Your Current Vibe</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#up-next">Up Next</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content" id="info-tabs">
+                  <div class="tab-pane fade show active" id="current-vibe">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum diam sit amet purus vulputate volutpat. Nunc eget mollis justo. Praesent dictum ex vel tortor molestie dapibus. Aenean condimentum iaculis lectus, a aliquet ante malesuada sit amet. In hac habitasse platea dictumst. Suspendisse non nulla quis nisi pharetra tristique. Duis at massa viverra, pretium ex sed, rutrum urna. Proin eget sapien tempus, sollicitudin nunc in, maximus sem. 
+                      </p>
+                  </div>
+                  <div class="tab-pane fade" id="up-next">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Next song 1</li>
+                      <li class="list-group-item">Next song 2</li>
+                      <li class="list-group-item">Next song 3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

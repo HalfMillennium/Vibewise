@@ -1,0 +1,44 @@
+/* styles for the Player page */
+
+#flex-container {
+    display: flex;
+    align-items: center;
+}
+
+#queue-holder {
+    align-self: flex-end;
+    float: right;
+    color: black;
+}
+
+#album-cover {
+    align-self: flex-start;
+    float: left;
+    margin: 15px;
+}
+
+#song-q {
+    align-self: flex-start;
+    float: left;
+    margin: 15px;
+    width: 50%;
+}
+
+#song-list-fill {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+}
+
+.bg-card-trans {
+    background-color: rgba(33, 33, 33, 0.9);
+    color: #ffffff;
+}
+
+#info-tabs {
+    padding-top: 10px;
+}
+
+p {
+    padding: 10px;
+}
