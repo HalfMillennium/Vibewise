@@ -14,14 +14,19 @@ import grab_spotify_data as gr
 
 app = Flask(__name__)
 
-@app.route('/getfilter', methods=['GET'])
-def get_playlist():
+@app.route('/getfilter/<path:varargs>', methods=['GET'])
+def get_playlist(varargs=None):
+    '''
     req = request.args
     # grab playlist ID from request
     playlist_id = req.get('playlist_id')
     # grab selected mood from request
-    mood = req.get('mood')
-    #mood = 'happy'
+    #mood = req.get('mood')
+    mood = 'happy'
+    '''
+    args = varargs.split('/')
+    playlist_id = args[0]
+    mood = args[1]
     scope = "playlist-modify-public"
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
@@ -66,7 +71,7 @@ def get_playlist():
 
     for song in merge:
         if(song[-1] == mood):
-            chosen_ids.append[song[0]]
+            chosen_ids.append(song[0])
 
     # Returns array of songs (IDs) that fit the user's desired mood
     return jsonify(chosen_ids)
