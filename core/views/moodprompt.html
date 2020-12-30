@@ -1,12 +1,7 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Spotify Authorization Code Flow Example</title>
-    <meta name="description" content="OAuth 2 Authorization Code Flow example for Spotify.">
-    <link id="favicon" rel="icon" href="https://cdn.glitch.com/project-avatar/b96c147f-8065-40a6-9908-4fcafce2a361.png" type="image/x-icon">
+    <title>Vibewise | The Mood Matcher</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,9 +20,14 @@
       <!--<button class="btn btn-primary" id="login">Don't see anything? Log in!</button>-->
       <div id="data-container" class="text-center">
         <div class="container">
-          <div class="jumbotron text-center bg-black" id="login_jumb">
-            <h1 class="display-4 text-white">Let's get started.</h1>
-            <button class="btn btn-success button-pad" id="login">Connect with Spotify</button>
+            <div class="jumbotron text-center text-white bg-black" id="mood_jumb">
+                <h1 class="display-4">What's your vibe right now?</h1>
+                <h3 style="color: #f55d42">Choose a simple, but descriptive sentence.</h3>
+                <br><br>
+                <input type="text" class="form-control" id="moodInput" placeholder="Type it in...">
+                <br>
+                <button class="btn btn-outline-light" id="submit-mood">Listen</button>
+              </div>
           </div>
         </div>
         <ul>
@@ -41,7 +41,6 @@
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
     <script src="/client.js"></script>
-    <script src="/retrieve-data.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   </body>

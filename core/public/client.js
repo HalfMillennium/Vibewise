@@ -34,7 +34,7 @@ $(function name() {
         // "Data" is the array of track objects we get from the API. See server.js for the function that returns it.
         console.log(data)
 
-        var title = $('<h3 class="display-4 text-white">Your public Spotify playlists:</h3>');
+        var title = $('<h3 class="display-4 text-white">Choose one of your (public) playlists.</h3>');
         title.prependTo('#data-container');
   
         var tracks = new Array(data.items.length);
@@ -46,12 +46,36 @@ $(function name() {
           document.getElementById("new").id = playlist.id;
 
           var button = document.getElementById(playlist.id);
-          button.setAttribute("onclick","getData(this.id)");
-          button.title = button.id;
+          button.setAttribute("onclick","getPrompt(this.id);");
+          
+          //button.title = button.id;
         });
   
       });
     }
+
+    $('#submit-mood').click(function() {
+      var txt = document.getElementById("moodInput").value;
+      txt = txt.replaceAll(" ","_");
+      console.log(txt)
+      $.ajax({
+        url : "/gettone",
+        type: "GET",
+        data: { text: txt },
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(res){
+          // log returned tones
+            console.log(res);
+        }
+    });
+    });
   
   });
   
+  function getPrompt(playlist_id) {
+    console.log(playlist_id);
+    localStorage.setItem('playlist',playlist_id);
+    // switch to mood prompt
+    window.location.href = '/mood'
+  }
