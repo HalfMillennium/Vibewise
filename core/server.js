@@ -54,8 +54,8 @@ var SpotifyWebApi = require('spotify-web-api-node');
 
 // Replace with your redirect URI, required scopes, and show_dialog preference
 var redirectUri = 'http://localhost:8888/callback',
-    clID = '9013dc5d86b84ffca62df2f22e00968e',
-    clSEC = 'b9484118ab374707925b1b15100cc58b';
+    clID = '',
+    clSEC = '';
 
 var scopes = ['user-top-read','streaming','user-read-private'];
 var showDialog = true;
