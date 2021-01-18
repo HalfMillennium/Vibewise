@@ -96,7 +96,71 @@ def get_tone(sent=None):
         content_type='application/json'
     ).get_result()
 
-    return jsonify(tone_analysis['document_tone']['tones'])
+    return jsonify(derive_mood(tone_analysis['document_tone']['tones']))
 
+# accepts ['tone_a','tone_b'] or ['one_tone']
+def derive_mood(tones):
+    vals = ['Anger', 'Fear', 'Joy', 'Sadness', 'Analytical', 'Confident', 'Tentative']
+    sc = []
+    to = []
+    for k in tones:
+        sc.append(k['score'])
+        to.append(k['tone_name'])
+    
+    sc_len = len(sc)
+    '''
+    if(len(sc) > 0):
+        if(sc_len > 1):
+            temp = sc
+            sc = np.array(sc)
+            sc.argsort()[-2:][::-1]
+            to[0] = to[np.where(temp == sc[0])]
+            to[1] = to[np.where(temp == sc[1])]'''
+    if(sc_len < 1):
+        return 'no_tone'
+    elif(sc_len > 1):
+        to = to[-2:]
+
+    if(sc_len > 1):
+        if(vals[0] in to and vals[3] in to):
+            return 'sad'
+        if(vals[0] in to):
+            return 'angry'
+        if(vals[1] in to and vals[2] in to):
+            return 'happy'
+        if(vals[1] in to and vals[3] in to):
+            return 'sad'
+        if(vals[1] in to and vals[4] in to):
+            return 'sad'
+        if(vals[1] in to and vals[5] in to):
+            return 'angry'
+        if(vals[2] in to and vals[4] in to):
+            return 'happy'
+        if(vals[2] in to and vals[5] in to):
+            return 'happy'
+        if(vals[3] in to):
+            return 'sad'
+        if(vals[4] in to and vals[5] in to):
+            return 'happy'
+        else:
+            return 'relaxed'
+    else:
+        if(to[0] == vals[0]):
+            return 'angry'
+        if(to[0] == vals[1]):
+            return 'sad'
+        if(to[0] == vals[2]):
+            return 'happy'
+        if(to[0] == vals[3]):
+            return 'sad'
+        if(to[0] == vals[4]):
+            return 'relaxed'
+        if(to[0] == vals[5]):
+            return 'happy'
+        if(to[0] == vals[6]):
+            return 'relaxed'
+        return 'relaxed'
+
+#def add_to_queue()
 if __name__ == '__main__':
     app.run(debug=True)

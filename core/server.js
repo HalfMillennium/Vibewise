@@ -30,11 +30,45 @@ app.get("/gettone", function (request, response) {
     path: '/gettone/'+str,
     method: 'GET'
   }
-  
+  mood = ''
   const req = http.request(options, res => {
     console.log(`statusCode: ${res.statusCode}`)
-    res.on('data', d => {
-      process.stdout.write(d)
+    res.on('data', (d) => {
+      //mood = d
+
+      console.log(`BODY: ${d.toString()}`);
+      response.send(d.toString());
+      //process.stdout.write(d)
+    });
+  })
+
+  req.on('error', error => {
+    console.error(error)
+  })
+
+  req.end()
+});
+
+app.get("/gettracks", function(request, response) {
+  id = request.query.id
+  m = request.query.mood_data
+
+  for (const key in request.query) {
+    console.log(key, request.query[key])
+  }
+
+  const options = {
+    hostname: '127.0.0.1',
+    port: 5000,
+    path: '/getfilter/'+id+'/'+m,
+    method: 'GET'
+  }
+
+  const req = http.request(options, res => {
+    console.log(`statusCode: ${res.statusCode}`)
+    res.on('data', (d) => {
+      //console.log("Raw result: " + d)
+      response.send(d)
     })
   })
 
@@ -43,6 +77,8 @@ app.get("/gettone", function (request, response) {
   })
 
   req.end()
+  // also, queue tracks to currently playing Spotify device
+  
 });
 
 
@@ -54,8 +90,8 @@ var SpotifyWebApi = require('spotify-web-api-node');
 
 // Replace with your redirect URI, required scopes, and show_dialog preference
 var redirectUri = 'http://localhost:8888/callback',
-    clID = '',
-    clSEC = '';
+    clID = '9013dc5d86b84ffca62df2f22e00968e',
+    clSEC = 'b9484118ab374707925b1b15100cc58b';
 
 var scopes = ['user-top-read','streaming','user-read-private'];
 var showDialog = true;

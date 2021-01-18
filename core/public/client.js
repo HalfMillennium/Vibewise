@@ -1,6 +1,8 @@
 // client-side js
 // run by the browser each time your view template is loaded
 
+//const { get } = require("https");
+
 // by default, you've got jQuery,
 // add other scripts at the bottom of index.html
 
@@ -58,6 +60,7 @@ $(function name() {
       var txt = document.getElementById("moodInput").value;
       txt = txt.replaceAll(" ","_");
       console.log(txt)
+      var mood = ''
       $.ajax({
         url : "/gettone",
         type: "GET",
@@ -66,16 +69,40 @@ $(function name() {
         dataType: "json",
         success: function(res){
           // log returned tones
-            console.log(res);
+          mood = JSON.stringify(res);
+          console.log("Resultant mood: " + mood);
+          getTracks(mood.replace(/['"]+/g, ''));
         }
-    });
+      });
     });
   
   });
+
+  function getTracks(mood) {
+      list_id = localStorage.getItem("playlist");
+      var tracks = []
+      console.log("Is mood still " + mood + "?");
+      $.ajax({
+        url : "/gettracks",
+        type: "GET",
+        data: { id: list_id, mood_data: mood },
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(res){
+          // log returned tones
+          //tracks = JSON.parse(res);
+          console.log("Client result: " + res);
+        }
+      });
+  }
   
   function getPrompt(playlist_id) {
     console.log(playlist_id);
     localStorage.setItem('playlist',playlist_id);
     // switch to mood prompt
     window.location.href = '/mood'
+  }
+
+  function updateQueue(track_ids) {
+    
   }
