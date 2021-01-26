@@ -21,20 +21,22 @@ app = Flask(__name__)
 ## TODO: Also pass auth token here, for use when queing songs in 'add_to_queue'
 @app.route('/getfilter/<path:varargs>', methods=['GET'])
 def get_playlist(varargs=None):
-    # grab playlist ID and mood from request
+    # grab playlist ID, mood and access token from request
     args = varargs.split('/')
     playlist_id = args[0]
     mood = args[1]
+    acc_token = request.args.get("acc")
+    app.logger.info(acc_token)
     scope = "playlist-modify-public"
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
-    token = util.prompt_for_user_token("Garrett Chestnut",
+    '''token = util.prompt_for_user_token("Garrett Chestnut",
                                scope,
                                client_id=os.environ["SPOTIPY_CLIENT_ID"],
                                client_secret=os.environ["SPOTIPY_CLIENT_SECRET"],
-                               redirect_uri=os.environ["SPOTIPY_REDIRECT_URI"])
+                               redirect_uri=os.environ["SPOTIPY_REDIRECT_URI"])'''
 
-    sp = spotipy.Spotify(auth=token)
+    sp = spotipy.Spotify(auth=acc_token)
     songs = sp.playlist(playlist_id)
     rf_model = pickle.load(open('model_export.sav','rb'))
 
@@ -55,7 +57,7 @@ def get_playlist(varargs=None):
     y_pred = rf_model.predict(X)
     results = encoder.inverse_transform(y_pred)
 
-    # Now have mood predictions for each song on user's playlist (in english)
+    # Now have mood predictions for each song on user's playli st (in english)
 
     merge = []
     for i, track in enumerate(raw_dataset):

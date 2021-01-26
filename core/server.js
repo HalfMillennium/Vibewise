@@ -54,6 +54,10 @@ app.get("/gettracks", function(request, response) {
   for (const key in request.query) {
     console.log(key, request.query[key])
   }
+  
+  const data = JSON.stringify({
+    acc: acc_token
+  })
 
   const options = {
     hostname: '127.0.0.1',
@@ -94,8 +98,8 @@ app.get("/gettracks", function(request, response) {
     console.error(error)
   })
 
+  req.write(data)
   req.end()
-  // also, queue tracks to currently playing Spotify device
   
 });
 
@@ -106,8 +110,9 @@ app.get("/gettracks", function(request, response) {
 // init Spotify API wrapper
 var SpotifyWebApi = require('spotify-web-api-node');
 
-// Replace with your redirect URI, required scopes, and show_dialog preference
-// TODO: Replace with own credentials -> var redirectUri = 
+var redirectUri = 'http://localhost:8888/callback',
+    clID = '9013dc5d86b84ffca62df2f22e00968e',
+    clSEC = 'b9484118ab374707925b1b15100cc58b';
 
 var scopes = ['user-top-read','streaming','user-read-private'];
 var showDialog = true;
@@ -133,6 +138,7 @@ app.get("/callback", function (request, response) {
   .then(function(data) {
     console.log(data)
     acc_token = data.body['access_token']
+    console.log("Access token here(auth): " + data.body['access_token'])
     response.redirect(`/#access_token=${data.body['access_token']}&refresh_token=${data.body['refresh_token']}`)
   }, function(err) {
     console.log('Something went wrong when retrieving the access token!', err.message);
@@ -142,7 +148,7 @@ app.get("/callback", function (request, response) {
 app.get("/logout", function (request, response) {
   response.redirect('/');
 });
-
+/*
 app.get("/queue", function (request, response) {
   // id_q is of the form: ?ids=track1&ids=track2...
   var id_q = buildArrString(track_ids);
@@ -176,7 +182,7 @@ function buildArrString(arr) {
   });
 
   return "?" + str.substring(1);
-}
+} */
 
 app.get('/getplaylists', function (request, response) {
   var loggedInSpotifyApi = new SpotifyWebApi();
