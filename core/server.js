@@ -6,6 +6,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 const http = require('http')
+var track_ids;
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -34,11 +35,8 @@ app.get("/gettone", function (request, response) {
   const req = http.request(options, res => {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
-      //mood = d
-
       console.log(`BODY: ${d.toString()}`);
       response.send(d.toString());
-      //process.stdout.write(d)
     });
   })
 
@@ -67,8 +65,28 @@ app.get("/gettracks", function(request, response) {
   const req = http.request(options, res => {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
-      //console.log("Raw result: " + d)
-      response.send(d)
+      // d = list of tracks
+      track_ids = d
+      const options = {
+        hostname: '127.0.0.1',
+        port: 5000,
+        path: '/getfilter/'+id+'/'+m,
+        method: 'GET'
+      }
+    
+      const req = http.request(options, res => {
+        console.log(`statusCode: ${res.statusCode}`)
+        res.on('data', (d) => {
+          //console.log("Raw result: " + d)
+          response.send(d)
+        })
+      })
+    
+      req.on('error', error => {
+        console.error(error)
+      })
+    
+      req.end()
     })
   })
 
@@ -89,13 +107,11 @@ app.get("/gettracks", function(request, response) {
 var SpotifyWebApi = require('spotify-web-api-node');
 
 // Replace with your redirect URI, required scopes, and show_dialog preference
-var redirectUri = 'http://localhost:8888/callback',
-    clID = '9013dc5d86b84ffca62df2f22e00968e',
-    clSEC = 'b9484118ab374707925b1b15100cc58b';
+// TODO: Replace with own credentials -> var redirectUri = 
 
 var scopes = ['user-top-read','streaming','user-read-private'];
 var showDialog = true;
-
+var acc_token;
 // The API object we'll use to interact with the API
 var spotifyApi = new SpotifyWebApi({
   clientId : clID,
@@ -116,6 +132,7 @@ app.get("/callback", function (request, response) {
   spotifyApi.authorizationCodeGrant(authorizationCode)
   .then(function(data) {
     console.log(data)
+    acc_token = data.body['access_token']
     response.redirect(`/#access_token=${data.body['access_token']}&refresh_token=${data.body['refresh_token']}`)
   }, function(err) {
     console.log('Something went wrong when retrieving the access token!', err.message);
@@ -125,6 +142,41 @@ app.get("/callback", function (request, response) {
 app.get("/logout", function (request, response) {
   response.redirect('/');
 });
+
+app.get("/queue", function (request, response) {
+  // id_q is of the form: ?ids=track1&ids=track2...
+  var id_q = buildArrString(track_ids);
+  console.log("Mod ids: " + id_q);
+  const options = {
+    hostname: '127.0.0.1',
+    port: 5000,
+    path: '/q/'+id_q,
+    method: 'GET'
+  }
+
+  const req = http.request(options, res => {
+    console.log(`statusCode: ${res.statusCode}`)
+    res.on('data', (d) => {
+      console.log("Array: " + d)
+      response.send(d)
+    })
+  })
+
+  req.on('error', error => {
+    console.error(error)
+  })
+
+  req.end()
+});
+
+function buildArrString(arr) {
+  str = ''
+  arr.forEach(element => {
+    str = str + "&ids=" + element;
+  });
+
+  return "?" + str.substring(1);
+}
 
 app.get('/getplaylists', function (request, response) {
   var loggedInSpotifyApi = new SpotifyWebApi();

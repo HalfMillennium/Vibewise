@@ -18,16 +18,10 @@ os.environ["SPOTIPY_REDIRECT_URI"] = 'https://github.com/HalfMillennium'
 
 app = Flask(__name__)
 
+## TODO: Also pass auth token here, for use when queing songs in 'add_to_queue'
 @app.route('/getfilter/<path:varargs>', methods=['GET'])
 def get_playlist(varargs=None):
-    '''
-    req = request.args
-    # grab playlist ID from request
-    playlist_id = req.get('playlist_id')
-    # grab selected mood from request
-    #mood = req.get('mood')
-    mood = 'happy'
-    '''
+    # grab playlist ID and mood from request
     args = varargs.split('/')
     playlist_id = args[0]
     mood = args[1]
@@ -78,6 +72,7 @@ def get_playlist(varargs=None):
             chosen_ids.append(song[0])
 
     # Returns array of songs (IDs) that fit the user's desired mood
+    ## TODO: Instead, queue all chosen IDs using auth token provided in request (also a Todo)
     return jsonify(chosen_ids)
 
 @app.route('/gettone/<path:sent>', methods=['GET'])
@@ -108,14 +103,7 @@ def derive_mood(tones):
         to.append(k['tone_name'])
     
     sc_len = len(sc)
-    '''
-    if(len(sc) > 0):
-        if(sc_len > 1):
-            temp = sc
-            sc = np.array(sc)
-            sc.argsort()[-2:][::-1]
-            to[0] = to[np.where(temp == sc[0])]
-            to[1] = to[np.where(temp == sc[1])]'''
+
     if(sc_len < 1):
         return 'no_tone'
     elif(sc_len > 1):
@@ -161,6 +149,12 @@ def derive_mood(tones):
             return 'relaxed'
         return 'relaxed'
 
-#def add_to_queue()
+@app.route('/q', methods=['GET'])
+def add_to_queue(token=None):
+    # UNNECESSARY -> Chosen IDs already known from 'get_playlist' method
+
+    # NEXT: get token, and queue songs
+    return token
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -71,6 +71,16 @@ $(function name() {
           // log returned tones
           mood = JSON.stringify(res);
           console.log("Resultant mood: " + mood);
+          // TEST: Get access token
+          $.ajax({
+            url : "/token",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(res){
+              console.log("Token: " + res);
+            }
+          });
           getTracks(mood.replace(/['"]+/g, ''));
         }
       });
@@ -89,9 +99,10 @@ $(function name() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function(res){
-          // log returned tones
+          // log returned tracks
           //tracks = JSON.parse(res);
           console.log("Client result: " + res);
+          updateQueue(res);
         }
       });
   }
@@ -104,5 +115,14 @@ $(function name() {
   }
 
   function updateQueue(track_ids) {
-    
+    $.ajax({
+      url : "http://127.0.0.1:5000/q?ids=123&ids=124",
+      type: "GET",
+      //sdata: JSON.stringify(track_ids),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(res){
+        console.log("Song info: " + res);
+      }
+    });
   }
