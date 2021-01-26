@@ -78,6 +78,7 @@ app.get("/gettracks", function(request, response) {
     res.on('data', (d) => {
       // d = list of tracks
       track_ids = d
+      response.send(track_ids)
     })
   })
 

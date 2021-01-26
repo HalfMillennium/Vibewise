@@ -40,12 +40,12 @@ def get_playlist(varargs=None):
 
     sp = spotipy.Spotify(auth=acc_token)
     songs = sp.playlist(playlist_id)
+    
     rf_model = pickle.load(open('model_export.sav','rb'))
 
     # Pass songs and sp to GrabSpotInfo object
     raw_dataset = gr.GrabSpotInfo(sp, songs)
     raw_dataset = raw_dataset.get_data()
-
     # Convert raw_dataset into dataframe
     X_raw = pd.DataFrame(raw_dataset)
 
@@ -70,10 +70,11 @@ def get_playlist(varargs=None):
         merge.append(row)
 
     chosen_ids = []
-    app.logger.info(chosen_ids[0])
+    
     for song in merge:
         if(song[-1] == mood):
             chosen_ids.append(song[0])
+    app.logger.info("Chosen ids:",chosen_ids[0], "Length:",len(chosen_ids))
 
     # Returns array of songs (IDs) that fit the user's desired mood
     ## TODO: Instead, queue all chosen IDs using auth token provided in request (also a Todo)
