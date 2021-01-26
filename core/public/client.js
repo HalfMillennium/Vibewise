@@ -72,15 +72,6 @@ $(function name() {
           mood = JSON.stringify(res);
           console.log("Resultant mood: " + mood);
           // TEST: Get access token
-          $.ajax({
-            url : "/token",
-            type: "GET",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function(res){
-              console.log("Token: " + res);
-            }
-          });
           getTracks(mood.replace(/['"]+/g, ''));
         }
       });
@@ -102,7 +93,7 @@ $(function name() {
           // log returned tracks
           //tracks = JSON.parse(res);
           console.log("Client result: " + res);
-          updateQueue(res);
+          //updateQueue(res);
         }
       });
   }

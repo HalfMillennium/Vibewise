@@ -6,6 +6,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 const http = require('http')
+const querystring = require('querystring')
 var track_ids;
 
 app.use(bodyParser.urlencoded({
@@ -55,14 +56,20 @@ app.get("/gettracks", function(request, response) {
     console.log(key, request.query[key])
   }
   
-  const data = JSON.stringify({
-    acc: acc_token
-  })
+  // GET parameters
+  const parameters = {
+    acc: acc_token,
+    playlist_id: id,
+    mood: m
+  }
+
+  // GET parameters as query string : "?id=123&type=post"
+  const get_request_args = querystring.stringify(parameters);
 
   const options = {
     hostname: '127.0.0.1',
     port: 5000,
-    path: '/getfilter/'+id+'/'+m,
+    path: '/getfilter/'+get_request_args,
     method: 'GET'
   }
 
@@ -71,26 +78,6 @@ app.get("/gettracks", function(request, response) {
     res.on('data', (d) => {
       // d = list of tracks
       track_ids = d
-      const options = {
-        hostname: '127.0.0.1',
-        port: 5000,
-        path: '/getfilter/'+id+'/'+m,
-        method: 'GET'
-      }
-    
-      const req = http.request(options, res => {
-        console.log(`statusCode: ${res.statusCode}`)
-        res.on('data', (d) => {
-          //console.log("Raw result: " + d)
-          response.send(d)
-        })
-      })
-    
-      req.on('error', error => {
-        console.error(error)
-      })
-    
-      req.end()
     })
   })
 
@@ -98,7 +85,6 @@ app.get("/gettracks", function(request, response) {
     console.error(error)
   })
 
-  req.write(data)
   req.end()
   
 });

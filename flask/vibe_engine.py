@@ -22,11 +22,13 @@ app = Flask(__name__)
 @app.route('/getfilter/<path:varargs>', methods=['GET'])
 def get_playlist(varargs=None):
     # grab playlist ID, mood and access token from request
-    args = varargs.split('/')
-    playlist_id = args[0]
-    mood = args[1]
-    acc_token = request.args.get("acc")
-    app.logger.info(acc_token)
+
+    playlist_id = request.args.get('playlist_id')
+    mood = request.args.get('mood')
+    acc_token = request.args.get('acc')
+
+    app.logger.info("Access: " + acc_token)
+
     scope = "playlist-modify-public"
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
