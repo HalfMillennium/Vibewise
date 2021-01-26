@@ -69,7 +69,7 @@ app.get("/gettracks", function(request, response) {
   const options = {
     hostname: '127.0.0.1',
     port: 5000,
-    path: '/getfilter/'+get_request_args,
+    path: '/getfilter/?'+get_request_args,
     method: 'GET'
   }
 

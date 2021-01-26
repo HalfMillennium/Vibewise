@@ -19,7 +19,7 @@ os.environ["SPOTIPY_REDIRECT_URI"] = 'https://github.com/HalfMillennium'
 app = Flask(__name__)
 
 ## TODO: Also pass auth token here, for use when queing songs in 'add_to_queue'
-@app.route('/getfilter/<path:varargs>', methods=['GET'])
+@app.route('/getfilter/', methods=['GET'])
 def get_playlist(varargs=None):
     # grab playlist ID, mood and access token from request
 
@@ -70,7 +70,7 @@ def get_playlist(varargs=None):
         merge.append(row)
 
     chosen_ids = []
-
+    app.logger.info(chosen_ids[0])
     for song in merge:
         if(song[-1] == mood):
             chosen_ids.append(song[0])
