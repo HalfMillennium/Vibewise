@@ -101,7 +101,7 @@ var redirectUri = 'http://localhost:8888/callback',
     clID = '9013dc5d86b84ffca62df2f22e00968e',
     clSEC = 'b9484118ab374707925b1b15100cc58b';
 
-var scopes = ['user-top-read','streaming','user-read-private'];
+var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state'];
 var showDialog = true;
 var acc_token;
 // The API object we'll use to interact with the API
@@ -188,8 +188,18 @@ app.get('/getplaylists', function (request, response) {
 
 //app.use(express.static('views'));
 app.get("/mood", function(request, response) {
-  console.log("Page requested.");
+  console.log("Mood prompt requested.");
   response.sendFile(__dirname + '/views/moodprompt.html'); 
+});
+
+app.get("/load", function(request, response) {
+  console.log("Loading...");
+  response.sendFile(__dirname + '/views/moodprompt.html'); 
+});
+
+app.get("/player", function(request, response) {
+  console.log("Player page requested.");
+  response.sendFile(__dirname + '/views/player_page.html'); 
 });
 
 //-------------------------------------------------------------//

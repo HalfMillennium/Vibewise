@@ -91,9 +91,9 @@ $(function name() {
         dataType: "json",
         success: function(res){
           // log returned tracks
-          //tracks = JSON.parse(res);
+          // tracks = JSON.parse(res);
           console.log("Client result: " + res);
-          //updateQueue(res);
+          window.location.href = '/player'
         }
       });
   }

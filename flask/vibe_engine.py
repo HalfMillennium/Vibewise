@@ -76,6 +76,10 @@ def get_playlist(varargs=None):
             chosen_ids.append(song[0])
     app.logger.info("Chosen ids:",chosen_ids[0], "Length:",len(chosen_ids))
 
+    # Queue songs to currently playing device
+    for track in chosen_ids:
+        sp.add_to_queue(track)
+
     # Returns array of songs (IDs) that fit the user's desired mood
     ## TODO: Instead, queue all chosen IDs using auth token provided in request (also a Todo)
     return jsonify(chosen_ids)
