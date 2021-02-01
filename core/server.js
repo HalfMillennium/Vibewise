@@ -166,7 +166,7 @@ function buildArrString(arr) {
   str = ''
   arr.forEach(element => {
     str = str + "&ids=" + element;
-  });
+  }); 
 
   return "?" + str.substring(1);
 } */
@@ -194,7 +194,7 @@ app.get("/mood", function(request, response) {
 
 app.get("/load", function(request, response) {
   console.log("Loading...");
-  response.sendFile(__dirname + '/views/moodprompt.html'); 
+  response.sendFile(__dirname + '/views/loading_page.html'); 
 });
 
 app.get("/player", function(request, response) {

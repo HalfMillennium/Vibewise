@@ -56,6 +56,7 @@ $(function name() {
       });
     }
 
+    // GET TONE route
     $('#submit-mood').click(function() {
       var txt = document.getElementById("moodInput").value;
       txt = txt.replaceAll(" ","_");
@@ -68,52 +69,25 @@ $(function name() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function(res){
-          // log returned tones
+          // log returned mood
           mood = JSON.stringify(res);
           console.log("Resultant mood: " + mood);
-          // TEST: Get access token
-          getTracks(mood.replace(/['"]+/g, ''));
+          localStorage.setItem("mood", mood)
+          window.location.href = '/load'
+          //getTracks(mood.replace(/['"]+/g, ''));
         }
       });
     });
   
   });
-
+/*
   function getTracks(mood) {
-      list_id = localStorage.getItem("playlist");
-      var tracks = []
-      console.log("Is mood still " + mood + "?");
-      $.ajax({
-        url : "/gettracks",
-        type: "GET",
-        data: { id: list_id, mood_data: mood },
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function(res){
-          // log returned tracks
-          // tracks = JSON.parse(res);
-          console.log("Client result: " + res);
-          window.location.href = '/player'
-        }
-      });
-  }
+      // moved to load.js
+  }*/
   
   function getPrompt(playlist_id) {
     console.log(playlist_id);
     localStorage.setItem('playlist',playlist_id);
     // switch to mood prompt
     window.location.href = '/mood'
-  }
-
-  function updateQueue(track_ids) {
-    $.ajax({
-      url : "http://127.0.0.1:5000/q?ids=123&ids=124",
-      type: "GET",
-      //sdata: JSON.stringify(track_ids),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(res){
-        console.log("Song info: " + res);
-      }
-    });
   }

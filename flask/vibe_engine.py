@@ -74,14 +74,13 @@ def get_playlist(varargs=None):
     for song in merge:
         if(song[-1] == mood):
             chosen_ids.append(song[0])
-    app.logger.info("Chosen ids:",chosen_ids[0], "Length:",len(chosen_ids))
+    #app.logger.info("Chosen ids:",chosen_ids[0], "Length:",len(chosen_ids))
 
     # Queue songs to currently playing device
     for track in chosen_ids:
         sp.add_to_queue(track)
 
     # Returns array of songs (IDs) that fit the user's desired mood
-    ## TODO: Instead, queue all chosen IDs using auth token provided in request (also a Todo)
     return jsonify(chosen_ids)
 
 @app.route('/gettone/<path:sent>', methods=['GET'])
@@ -157,13 +156,6 @@ def derive_mood(tones):
         if(to[0] == vals[6]):
             return 'relaxed'
         return 'relaxed'
-
-@app.route('/q', methods=['GET'])
-def add_to_queue(token=None):
-    # UNNECESSARY -> Chosen IDs already known from 'get_playlist' method
-
-    # NEXT: get token, and queue songs
-    return token
 
 if __name__ == '__main__':
     app.run(debug=True)
