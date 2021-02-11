@@ -7,7 +7,6 @@
  */
 
 $(function name() {
-    console.log("here")
     mood = localStorage.getItem("mood")
     getTracks(mood.replace(/['"]+/g, ''));
   });

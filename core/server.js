@@ -98,8 +98,8 @@ app.get("/gettracks", function(request, response) {
 var SpotifyWebApi = require('spotify-web-api-node');
 
 var redirectUri = 'http://localhost:8888/callback',
-    clID = '9013dc5d86b84ffca62df2f22e00968e',
-    clSEC = 'b9484118ab374707925b1b15100cc58b';
+    clID = '',
+    clSEC = '';
 
 var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state'];
 var showDialog = true;
@@ -135,41 +135,6 @@ app.get("/callback", function (request, response) {
 app.get("/logout", function (request, response) {
   response.redirect('/');
 });
-/*
-app.get("/queue", function (request, response) {
-  // id_q is of the form: ?ids=track1&ids=track2...
-  var id_q = buildArrString(track_ids);
-  console.log("Mod ids: " + id_q);
-  const options = {
-    hostname: '127.0.0.1',
-    port: 5000,
-    path: '/q/'+id_q,
-    method: 'GET'
-  }
-
-  const req = http.request(options, res => {
-    console.log(`statusCode: ${res.statusCode}`)
-    res.on('data', (d) => {
-      console.log("Array: " + d)
-      response.send(d)
-    })
-  })
-
-  req.on('error', error => {
-    console.error(error)
-  })
-
-  req.end()
-});
-
-function buildArrString(arr) {
-  str = ''
-  arr.forEach(element => {
-    str = str + "&ids=" + element;
-  }); 
-
-  return "?" + str.substring(1);
-} */
 
 app.get('/getplaylists', function (request, response) {
   var loggedInSpotifyApi = new SpotifyWebApi();
