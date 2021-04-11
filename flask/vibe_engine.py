@@ -11,14 +11,18 @@ from flask import Flask, jsonify, request
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from dotenv import load_dotenv
 import grab_spotify_data as gr
 
 
-os.environ["SPOTIPY_CLIENT_ID"] = '9013dc5d86b84ffca62df2f22e00968e'
-os.environ["SPOTIPY_CLIENT_SECRET"] = 'b9484118ab374707925b1b15100cc58b'
-os.environ["SPOTIPY_REDIRECT_URI"] = 'https://github.com/HalfMillennium'
+#client_id = os.environ.get("SPOTIPY_CLIENT_ID") #= '9013dc5d86b84ffca62df2f22e00968e'
+#client_sec = os.environ.get("SPOTIPY_CLIENT_SECRET") #= 'b9484118ab374707925b1b15100cc58b'
+#redirect_uri = os.environ.get("SPOTIPY_REDIRECT_URI") #= ''
 
 app = Flask(__name__)
+
+# load .env file
+load_dotenv()
 
 def pstdout(*a):
     print(*a, file=sys.stdout)
@@ -70,22 +74,24 @@ def get_playlist(varargs=None):
 
     chosen_ids = []
     
-    for song in merge:
+    for i, song in enumerate(merge):
+        if(i == os.environ.get("TRACK_LIMIT")):
+            break
         if(song[-1] == mood):
             chosen_ids.append(song[0])
     #app.logger.info("Chosen ids:",chosen_ids[0], "Length:",len(chosen_ids))
 
     # Queue songs to currently playing device
     for track in chosen_ids:
-        pstdout(*track)
+        #pstdout(*track)
         sp.add_to_queue(track)
     t = sp.tracks(chosen_ids)
     track_info = []
-    for song in t:
+    for song in t['tracks']:
         track_info.append([song['album']['images'][0]['url'],song['artists'][0]['name'],song['name']])
     current = sp.currently_playing()
     current = current['item']
-    track_info.insert(0, [current['album'][0]['url'],current['artists'][0]['name'],current['name']])
+    track_info.insert(0, [current['album']['images'][0]['url'],current['artists'][0]['name'],current['name']])
     # Returns array of songs (IDs) that fit the user's desired mood
     return jsonify(track_info)
 
@@ -93,13 +99,13 @@ def get_playlist(varargs=None):
 def get_tone(sent=None):
     # spaces in the string are replaced with '_'
     # Tone Analyzer API
-    authenticator = IAMAuthenticator('R7Ja2rP0jp6LucFzOl5-4xbMSVSX5Fci8wc63J0O5-l3')
+    authenticator = IAMAuthenticator(os.environ.get("WAT_AUTH_TOKEN"))
     tone_analyzer = ToneAnalyzerV3(
         version='2017-09-21',
         authenticator=authenticator
     )
     sent = sent.replace('_',' ')
-    tone_analyzer.set_service_url('https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/b8f00a45-63d1-4bb9-b1a0-1c2e6bc3e4ca')
+    tone_analyzer.set_service_url(os.environ.get("WAT_SERV_URL"))
     tone_analysis = tone_analyzer.tone(
         {'text': sent },
         content_type='application/json'
