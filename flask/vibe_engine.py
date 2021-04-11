@@ -92,7 +92,7 @@ def get_tone(sent=None):
         authenticator=authenticator
     )
     sent = sent.replace('_',' ')
-    tone_analyzer.set_service_url('')
+    tone_analyzer.set_service_url('https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/...')
     tone_analysis = tone_analyzer.tone(
         {'text': sent },
         content_type='application/json'
