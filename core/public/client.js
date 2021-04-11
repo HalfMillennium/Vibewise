@@ -73,7 +73,7 @@ $(function name() {
           mood = JSON.stringify(res);
           console.log("Resultant mood: " + mood);
           localStorage.setItem("mood", mood)
-          window.location.href = '/load'
+          window.location.href = '/u/load'
           //getTracks(mood.replace(/['"]+/g, ''));
         }
       });
@@ -89,5 +89,5 @@ $(function name() {
     console.log(playlist_id);
     localStorage.setItem('playlist',playlist_id);
     // switch to mood prompt
-    window.location.href = '/mood'
+    window.location.href = '/u/mood'
   }

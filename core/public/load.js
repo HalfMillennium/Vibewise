@@ -24,7 +24,16 @@ $(function name() {
         success: function(res){
           // log returned tracks
           console.log("Client result: " + res);
-          window.location.href = '/player'
+          //window.location.href = '/u/player'
+          $.ajax({
+            url: "/u/player",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(res){
+              console.log("Tracks loaded.")
+            }
+          })
         }
       });
   }
