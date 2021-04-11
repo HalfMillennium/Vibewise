@@ -3,8 +3,8 @@ var router = express.Router();
 var path = require('path');
 var SpotifyWebApi = require('spotify-web-api-node');
 var redirectUri = 'http://localhost:8888/callback',
-    clID = '9013dc5d86b84ffca62df2f22e00968e',
-    clSEC = 'b9484118ab374707925b1b15100cc58b';
+    clID = '',
+    clSEC = '';
 var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state'];
 var showDialog = true;
 var acc_token;
