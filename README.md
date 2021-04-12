@@ -10,6 +10,6 @@ A web app that allows users to play a subsection of a selected playlist based on
 
 ## Getting things running
 To get things running, follow these steps:
-1) Retrieve valid client ID and secret from Spotify API as well as IBM Watson Tone Analyzer keys.
+1) Retrieve valid client ID and secret from Spotify API as well as IBM Watson Tone Analyzer keys. Place these next to appropriate variable name within the .env files (one in `core` and `flask`).
 2) In `/flask` run `python vibe_engine.py` to get the Flask API running on your machine.
 3) In `/core` (new command window/terminal) run `node server.js` to make the web app accessible at `localhost:8888`.

@@ -14,11 +14,6 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from dotenv import load_dotenv
 import grab_spotify_data as gr
 
-
-#client_id = os.environ.get("SPOTIPY_CLIENT_ID") #= '9013dc5d86b84ffca62df2f22e00968e'
-#client_sec = os.environ.get("SPOTIPY_CLIENT_SECRET") #= 'b9484118ab374707925b1b15100cc58b'
-#redirect_uri = os.environ.get("SPOTIPY_REDIRECT_URI") #= ''
-
 app = Flask(__name__)
 
 # load .env file
@@ -99,12 +94,14 @@ def get_playlist(varargs=None):
 def get_tone(sent=None):
     # spaces in the string are replaced with '_'
     # Tone Analyzer API
+    
     authenticator = IAMAuthenticator(os.environ.get("WAT_AUTH_TOKEN"))
     tone_analyzer = ToneAnalyzerV3(
         version='2017-09-21',
         authenticator=authenticator
     )
     sent = sent.replace('_',' ')
+
     tone_analyzer.set_service_url(os.environ.get("WAT_SERV_URL"))
     tone_analysis = tone_analyzer.tone(
         {'text': sent },
