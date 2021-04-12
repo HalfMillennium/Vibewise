@@ -5,8 +5,9 @@ var SpotifyWebApi = require('spotify-web-api-node');
 require('dotenv').config()
 
 var redirectUri = 'http://localhost:8888/callback',
-    clID = process.env.SPOTIPY_CLIENT_ID,
-    clSEC = process.env.SPOTIPY_CLIENT_SECRET;
+
+clID = process.env.SPOTIPY_CLIENT_ID,
+clSEC = process.env.SPOTIPY_CLIENT_SECRET;
 console.log(clID)
 console.log(clSEC)
 var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state', 'user-read-currently-playing'];
