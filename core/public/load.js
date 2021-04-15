@@ -25,15 +25,16 @@ $(function name() {
           // log returned tracks
           console.log("Client result: " + res);
           window.location.href = '/u/player'
-          /*$.ajax({
+          $.ajax({
             url: "/u/player",
-            type: "GET",
+            type: "POST",
+            data: { track_info: res },
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function(res){
               console.log("Tracks loaded.")
             }
-          })*/
+          })
         }
       });
   }
