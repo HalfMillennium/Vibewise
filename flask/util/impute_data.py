@@ -10,7 +10,6 @@ sad = ['Brooding','Yearning','Somber','Melancholy','Serious','Stirring']
 angry = ['Aggressive','Gritty','Urgent','Defiant','Rowdy','Fiery']
 peaceful = ['Peaceful','Sentimental','Tender','Cool','Sensual','Other']
 
-
 for r in raw:
     pr = True
     for val in r:
