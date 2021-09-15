@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var router = express.Router();
 var path = require('path');
@@ -6,10 +7,8 @@ require('dotenv').config()
 
 var redirectUri = 'http://localhost:8888/callback',
 
-clID = process.env.SPOTIPY_CLIENT_ID,
-clSEC = process.env.SPOTIPY_CLIENT_SECRET;
-console.log(clID)
-console.log(clSEC)
+clID = process.env.CLIENT_ID,
+clSEC = process.env.CLIENT_SECRET;
 var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state', 'user-read-currently-playing'];
 var showDialog = true;
 var acc_token;
