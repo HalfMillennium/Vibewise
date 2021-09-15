@@ -20,7 +20,7 @@ class GrabSpotInfo():
             dataset.append([track['track']['id'],aud_feat['energy'],aud_feat['liveness'],aud_feat['tempo'],
                             aud_feat['speechiness'],aud_feat['acousticness'],aud_feat['instrumentalness'],
                             aud_feat['time_signature'],aud_feat['danceability'],aud_feat['key'],
-                            aud_feat['valence'],aud_feat['mode']])
+                            aud_feat['duration_ms'],aud_feat['loudness'],aud_feat['valence'],aud_feat['mode']])
 
         return dataset
 

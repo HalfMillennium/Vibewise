@@ -40,9 +40,9 @@ def get_playlist(varargs=None):
 
     sp = spotipy.Spotify(auth=acc_token)
     songs = sp.playlist(playlist_id)
-    
-    rf_model = pickle.load(open('model_export.sav','rb'))
-
+    #songs = sp.playlist("37i9dQZF1DZ06evO0N5yhI")
+    #rf_model = pickle.load(open('model_export.sav','rb'))
+    xg_model = pickle.load(open('xgboost_model.sav','rb'))
     # Pass songs and sp to GrabSpotInfo object
     raw_dataset = gr.GrabSpotInfo(sp, songs)
     raw_dataset = raw_dataset.get_data()
@@ -55,8 +55,8 @@ def get_playlist(varargs=None):
     X = sc.fit_transform(X)
 
     # Load encoder from file
-    encoder = pickle.load(open('result_encoder.sav','rb'))
-    y_pred = rf_model.predict(X)
+    encoder = pickle.load(open('mood_encoder.sav','rb'))
+    y_pred = xg_model.predict(X)
     results = encoder.inverse_transform(y_pred)
 
     # Now have mood predictions for each song on user's playli st (in english)
@@ -72,6 +72,7 @@ def get_playlist(varargs=None):
     chosen_ids = []
     
     for song in merge:
+        pstdout(*song)
         if(song[-1] == mood):
             chosen_ids.append(song[0])
     #app.logger.info("Chosen ids:",chosen_ids[0], "Length:",len(chosen_ids))
@@ -126,43 +127,43 @@ def derive_mood(tones):
 
     if(sc_len > 1):
         if(vals[0] in to and vals[3] in to):
-            return 'sad'
+            return 'Sad'
         if(vals[0] in to):
-            return 'angry'
+            return 'Aggressive'
         if(vals[1] in to and vals[2] in to):
-            return 'happy'
+            return 'Energetic'
         if(vals[1] in to and vals[3] in to):
-            return 'sad'
+            return 'Sad'
         if(vals[1] in to and vals[4] in to):
-            return 'sad'
+            return 'Sad'
         if(vals[1] in to and vals[5] in to):
-            return 'angry'
+            return 'Aggressive'
         if(vals[2] in to and vals[4] in to):
-            return 'happy'
+            return 'Energetic'
         if(vals[2] in to and vals[5] in to):
-            return 'happy'
+            return 'Energetic'
         if(vals[3] in to):
-            return 'sad'
+            return 'Sad'
         if(vals[4] in to and vals[5] in to):
-            return 'happy'
+            return 'Energetic'
         else:
-            return 'relaxed'
+            return 'Easygoing'
     else:
         if(to[0] == vals[0]):
-            return 'angry'
+            return 'Aggressive'
         if(to[0] == vals[1]):
-            return 'sad'
+            return 'Sad'
         if(to[0] == vals[2]):
-            return 'happy'
+            return 'Energetic'
         if(to[0] == vals[3]):
-            return 'sad'
+            return 'Sad'
         if(to[0] == vals[4]):
-            return 'relaxed'
+            return 'Easygoing'
         if(to[0] == vals[5]):
-            return 'happy'
+            return 'Energetic'
         if(to[0] == vals[6]):
-            return 'relaxed'
-        return 'relaxed'
+            return 'Easygoing'
+        return 'Other'
 
 if __name__ == '__main__':
     app.run(debug=True)
