@@ -35,7 +35,7 @@ def get_playlist(varargs=None):
 
     app.logger.info("Access: " + acc_token)
 
-    scope = "playlist-modify-public"
+    scope = "playlist-modify-public user-read-currently-playing"
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
     sp = spotipy.Spotify(auth=acc_token)
@@ -79,15 +79,16 @@ def get_playlist(varargs=None):
 
     # Queue songs to currently playing device
     for track in chosen_ids:
-        pstdout(*track)
+        #pstdout(*track)
         sp.add_to_queue(track)
-    t = sp.tracks(chosen_ids)
+    t = sp.tracks(chosen_ids)['tracks']
     track_info = []
+    #pstdout("result:",*t)
     for song in t:
         track_info.append([song['album']['images'][0]['url'],song['artists'][0]['name'],song['name']])
     current = sp.currently_playing()
     current = current['item']
-    track_info.insert(0, [current['album'][0]['url'],current['artists'][0]['name'],current['name']])
+    track_info.insert(0, [current['album']['images'][0]['url'],current['artists'][0]['name'],current['name']])
     # Returns array of songs (IDs) that fit the user's desired mood
     return jsonify(track_info)
 

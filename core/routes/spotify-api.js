@@ -6,7 +6,7 @@ var SpotifyWebApi = require('spotify-web-api-node');
 var redirectUri = 'http://localhost:8888/callback',
     clID = process.env.CLIENT_ID,
     clSEC = process.env.CLIENT_SECRET;
-var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state'];
+var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state', 'user-read-currently-playing'];
 var showDialog = true;
 var acc_token;
 // The API object we'll use to interact with the API
