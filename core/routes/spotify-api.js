@@ -3,12 +3,15 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var SpotifyWebApi = require('spotify-web-api-node');
+require('dotenv').config()
+
 var redirectUri = 'http://localhost:8888/callback',
-    clID = process.env.CLIENT_ID,
-    clSEC = process.env.CLIENT_SECRET;
 var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state', 'user-read-currently-playing'];
 var showDialog = true;
 var acc_token;
+
+clID = process.env.CLIENT_ID,
+clSEC = process.env.CLIENT_SECRET;
 // The API object we'll use to interact with the API
 var spotifyApi = new SpotifyWebApi({
   clientId : clID,
@@ -122,10 +125,11 @@ router.get("/gettracks", function(request, response) {
       track_ids = d
       response.send(track_ids)
     })
+    console.log(JSON.stringify(res.headers['retry-after']));
   })
 
   req.on('error', error => {
-    console.error(error)
+    console.error(error.message)
   })
 
   req.end()

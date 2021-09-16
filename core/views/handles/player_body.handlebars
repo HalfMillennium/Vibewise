@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Vibewise | The Mood Matcher</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/player_page_style.css">
-    <link rel="stylesheet" href="/gradient-bg-style.css">
-  </head>
-  <body class="grad-bg">
-    <div class="h-100 justify-content-center align-items-center">
+<div class="h-100 justify-content-center align-items-center">
       <!--<button class="btn btn-primary" id="login">Don't see anything? Log in!</button>-->
       <div id="data-container" class="text-center">
         <div class="container">
@@ -22,7 +9,7 @@
               <div id="song-q" class="card border-0 light">
                 <!--<img src="https://via.placeholder.com/500" class="rounded">-->
                 <div class="card-header bg-card-trans">
-                  <h1 class="display-4">Just chill out...</h1>
+                  <h1 class="display-4">{{current_name}}</h1>
                   <small>Relax for a bit.</small>
                   <br>
                   <ul class="nav nav-pills card-header-pills">
@@ -42,17 +29,20 @@
                   </div>
                   <div class="tab-pane fade" id="up-next">
                     <ul class="list-group list-group-flush">
+                      {{#each tracks}}
                       <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Any Colour You Like
-                        <small class="sub-art">Pink Floyd</small>
+                        {{song_title}}
+                        <small class="sub-art">{{m_artist_name}}</small>
                         <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
                       </li>
-
+                      {{/each}}
+                      <!--
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         NextSong
                         <small class="sub-art">NextArtist</small>
                         <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
                       </li>
+                      -->
                     </ul>
                   </div>
                 </div>
@@ -61,14 +51,3 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-  </body>
-</html>

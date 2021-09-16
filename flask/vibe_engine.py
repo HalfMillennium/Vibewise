@@ -11,15 +11,20 @@ from flask import Flask, jsonify, request
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from dotenv import load_dotenv
 import grab_spotify_data as gr
 from dotenv import dotenv_values
 config = dotenv_values(".env")
+
 
 os.environ["SPOTIPY_CLIENT_ID"] = config['CLIENT_ID']
 os.environ["SPOTIPY_CLIENT_SECRET"] = config['CLIENT_SECRET']
 os.environ["SPOTIPY_REDIRECT_URI"] = config['REDIRECT']
 
 app = Flask(__name__)
+
+# load .env file
+load_dotenv()
 
 def pstdout(*a):
     print(*a, file=sys.stdout)
@@ -96,6 +101,7 @@ def get_playlist(varargs=None):
 def get_tone(sent=None):
     # spaces in the string are replaced with '_'
     # Tone Analyzer API
+
     authenticator = IAMAuthenticator(config['IBM_KEY'])
     tone_analyzer = ToneAnalyzerV3(
         version='2017-09-21',
