@@ -5,7 +5,7 @@ var path = require('path');
 var SpotifyWebApi = require('spotify-web-api-node');
 require('dotenv').config()
 
-var redirectUri = 'http://localhost:8888/callback',
+var redirectUri = 'http://localhost:8888/callback';
 var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state', 'user-read-currently-playing'];
 var showDialog = true;
 var acc_token;
@@ -82,6 +82,10 @@ router.get("/gettone", function (request, response) {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
       console.log(`BODY: ${d.toString()}`);
+      if(d.toString() == 'no_tone') {
+        response.status(400).send("No tone detected! Try another phrase/sentence.")
+        response.end()
+      }
       response.send(d.toString());
     });
   })
@@ -125,7 +129,6 @@ router.get("/gettracks", function(request, response) {
       track_ids = d
       response.send(track_ids)
     })
-    console.log(JSON.stringify(res.headers['retry-after']));
   })
 
   req.on('error', error => {

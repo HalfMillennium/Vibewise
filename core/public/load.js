@@ -13,8 +13,7 @@ $(function name() {
 
   function getTracks(mood) {
       list_id = localStorage.getItem("playlist");
-      var tracks = []
-      //console.log("Is mood still " + mood + "?");
+      //window.location.href = '/u/player'
       $.ajax({
         url : "/gettracks",
         type: "GET",
@@ -22,20 +21,23 @@ $(function name() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function(res){
-          // log returned tracks
-          console.log("Client result: " + res);
-          window.location.href = '/u/player'
+          console.log({ track_info: res });
           $.ajax({
+            // Server should respond with 'player_body.handlebars'
             url: "/u/player",
-            type: "POST",
-            data: { track_info: res },
+            type: "GET",
+            data: JSON.stringify({ track_info: res }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function(res){
+              // Is never reached
               console.log("Tracks loaded.")
+              window.location.href = '/u/player'
+            },
+            error: function(e){
+              console.log(e)
             }
           })
         }
       });
   }
-  

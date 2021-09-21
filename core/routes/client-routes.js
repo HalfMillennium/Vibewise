@@ -1,31 +1,41 @@
-const { response } = require('express');
 var express = require('express');
+var app = express();
 var router = express.Router();
 var path = require('path');
-express.use(express.static('public'));
-express.use(express.urlencoded({ extended: true }));
+//var exphbs = require('express-handlebars');
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+/*
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');*/
 
-express.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-express.set('view engine', 'handlebars');
+//router.use(express.static('public'));
+router.use(express.json());
 
 router.get("/mood", function(request, response) {
   console.log("Mood prompt requested.");
-  response.sendFile(path.resolve('views/moodprompt.html'));
+  response.sendFile(path.resolve('views/moodprompt.html')); 
 });
 
 router.get("/load", function(request, response) {
   console.log("Loading...");
-  response.sendFile(path.resolve('views/loading_page.html'));
+  response.sendFile(path.resolve('views/loading_page.html')); 
 });
 
-router.post("/player", function(req, res) {
-  track_info = req.query.track_info;
-  response.send("views/handles/player_body", { track_inf : track_info } )
-});
-/*
 router.get("/player", function(request, response) {
   console.log("Player page requested.");
-  response.sendFile(path.resolve('views/player_page.html'));
-});*/
+  //response.sendFile(path.resolve('views/player_page.html'));
+  t = []
+  for(track of request.body.track_info) {
+    t.push({
+      image: track[0],
+      artist: track[1],
+      song: track[2]
+    })
+  }
+  console.log("track_info (objects):",t)
+  response.sendFile(path.resolve('views/static_page.html'))
+  //response.render("player_body", { t })
+});
 
 module.exports = router;

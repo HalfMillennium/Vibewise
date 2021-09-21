@@ -133,6 +133,8 @@ def derive_mood(tones):
         to = to[-2:]
 
     if(sc_len > 1):
+        if(vals[6] in to):
+            return 'Easygoing'
         if(vals[0] in to and vals[3] in to):
             return 'Sad'
         if(vals[0] in to):
