@@ -25,8 +25,29 @@ var track_ids;
 router.use(express.static('public'));
 
 router.get("/", function (request, response) {
+  // starts vibe engine
+  if(!request.session.v) {
+    var engine = require('child_process').exec('python vibe_engine.py', {
+      cwd: '/Users/percival/Documents/GitHub/Vibewise/flask'
+    }, function(error, stdout, stderr) {
+      if(error) {
+        console.log("Error:",error,"\n")
+      }
+      if(stderr) {
+        console.log("Stderr:",stderr,"\n")
+      }
+      //console.log("Vibe engine initiated:\n",stdout)
+    });
+    engine.stdout.pipe(process.stdout)
+    engine.on('exit', function() {
+      console.log("Vibe engine initiated.")
+    })
+    request.session.v = 1
+  }
+
   response.sendFile(path.resolve(__dirname + './../views/index.html'));
 });
+  
 
 router.get("/authorize", function (request, response) {
   var authorizeURL = spotifyApi.createAuthorizeURL(scopes, null, showDialog);
@@ -126,6 +147,9 @@ router.get("/gettracks", function(request, response) {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
       // d = list of tracks
+      if(d == "INACTIVE") {
+        response.send(path.resolve("views/no_active.html"))
+      }
       track_ids = d
       response.send(track_ids)
     })

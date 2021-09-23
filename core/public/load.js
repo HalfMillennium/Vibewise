@@ -20,24 +20,58 @@ $(function name() {
         data: { id: list_id, mood_data: mood },
         contentType: "application/json; charset=utf-8",
         dataType: "json",
+        /*
         success: function(res){
           console.log({ track_info: res });
           $.ajax({
             // Server should respond with 'player_body.handlebars'
             url: "/u/player",
-            type: "GET",
+            type: "POST",
             data: JSON.stringify({ track_info: res }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function(res){
               // Is never reached
               console.log("Tracks loaded.")
-              window.location.href = '/u/player'
+              //window.location.href = '/u/player'
             },
             error: function(e){
               console.log(e)
             }
           })
+        },*/
+        complete: function(res) {
+          $.ajax({
+            // Server should respond with 'player_body.handlebars'
+            url: "/u/tracks",
+            type: "POST",
+            data: JSON.stringify({ track_info: res }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(res){
+              // Is never reached
+              console.log("Tracks loaded.")
+              //window.location.href = '/u/player'
+            },
+            complete: function(c) {
+              getPlayer()
+            }
+          })
         }
       });
+  }
+
+  function getPlayer() {
+    $.ajax({
+      // Server should respond with 'player_body.handlebars'
+      url: "/u/player",
+      type: "GET",
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      complete: function(res){
+        // Is never reached
+        console.log("Player page requested.")
+        window.location.href = '/u/player'
+      }
+    })
   }

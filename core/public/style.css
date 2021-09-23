@@ -83,5 +83,15 @@
     text-align: left;
   }
 
+  .holder {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-box {
+    text-align:center;
+    margin-top:20px;
+ }
+
 
   

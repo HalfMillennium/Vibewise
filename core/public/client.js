@@ -70,11 +70,13 @@ $(function name() {
         dataType: "json",
         success: function(res){
           // log returned mood
-          mood = JSON.stringify(res);
-          console.log("Resultant mood: " + mood);
-          localStorage.setItem("mood", mood)
-          window.location.href = '/u/load'
-          //getTracks(mood.replace(/['"]+/g, ''));
+          if(res) {
+            mood = JSON.stringify(res);
+            console.log("Resultant mood: " + mood);
+            localStorage.setItem("mood", mood)
+            window.location.href = '/u/load'
+            //getTracks(mood.replace(/['"]+/g, ''));
+          }
         }
       });
     });

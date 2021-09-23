@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vibewise | The Mood Matcher</title>
+    <title>Vibewise | Enjoy!</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/player_page_style.css">
-    <link rel="stylesheet" href="/gradient-bg-style.css">
   </head>
-  <body class="grad-bg">
-    <div class="h-100 justify-content-center align-items-center">
+  <body class="bg-black">
+    <!--
+    <header>
+      <h1>
+        Spotify Authorization Code Flow
+      </h1>
+    </header> -->
+
+    <div class="row h-100 justify-content-center align-items-center">
       <!--<button class="btn btn-primary" id="login">Don't see anything? Log in!</button>-->
       <div id="data-container" class="text-center">
         <div class="container">
-            <div class="jumbotron bg-trans holder" id="flex-container">
-                <div class="container">
-                    <h1 class="display-4 text-center text-white">Hold tight! Your queue is being updated right... now.</h1>
-                    <h4 class="text-white text-center">Enjoy the vibes on us.</h4>
+            <div class="jumbotron text-center text-white trans-jumb id="mood_jumb">
+                <h1 class="display-4"><b>Check out your new queue!</b></h1>
+                <h3 style="color: #f5f5f5">We didn't find many songs on your playlist that match your vibe, but check out our picks!</h3>
+                <br><br>
+                <!--<button class="btn btn-outline-light" id="submit-mood">Listen</button>-->
+                <div class="button-box col-lg-12">
+                    <a href="/u/mood" class="btn btn-outline-light" role="button">Give me a new vibe!</a>
+                    <a href="/" class="btn btn-outline-light" role="button">New playlist!</a>
                 </div>
-                <div class="container">
-                    <h5><a href="/u/mood">Give me a new vibe!</a></h5>
-                </div>
-            </div>
+              </div>
           </div>
         </div>
       </div>

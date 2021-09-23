@@ -85,7 +85,11 @@ def get_playlist(varargs=None):
     # Queue songs to currently playing device
     for track in chosen_ids:
         #pstdout(*track)
-        sp.add_to_queue(track)
+        try:
+            sp.add_to_queue(track)
+        except e:
+            return jsonify("INACTIVE")
+
     t = sp.tracks(chosen_ids)['tracks']
     track_info = []
     #pstdout("result:",*t)
@@ -102,19 +106,22 @@ def get_tone(sent=None):
     # spaces in the string are replaced with '_'
     # Tone Analyzer API
 
-    authenticator = IAMAuthenticator(config['IBM_KEY'])
-    tone_analyzer = ToneAnalyzerV3(
-        version='2017-09-21',
-        authenticator=authenticator
-    )
-    sent = sent.replace('_',' ')
-    tone_analyzer.set_service_url(config['SERVICE_URL'])
-    tone_analysis = tone_analyzer.tone(
-        {'text': sent },
-        content_type='application/json'
-    ).get_result()
+    if(sent and sent.replace('_','')):
+        authenticator = IAMAuthenticator(config['IBM_KEY'])
+        tone_analyzer = ToneAnalyzerV3(
+            version='2017-09-21',
+            authenticator=authenticator
+        )
+        sent = sent.replace('_',' ')
+        tone_analyzer.set_service_url(config['SERVICE_URL'])
+        tone_analysis = tone_analyzer.tone(
+            {'text': sent },
+            content_type='application/json'
+        ).get_result()
 
-    return jsonify(derive_mood(tone_analysis['document_tone']['tones']))
+        return jsonify(derive_mood(tone_analysis['document_tone']['tones']))
+    else:
+        return None
 
 # accepts ['tone_a','tone_b'] or ['one_tone']
 def derive_mood(tones):
