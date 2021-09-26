@@ -1,19 +1,32 @@
 {
-  "name": "vibewise",
+  "name": "spotifynodeexample",
   "version": "1.0.0",
-  "description": "A web app that allows users to play a subsection of a selected playlist based on their mood. This mood is determined by a descriptive sentence entered by the user.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node core/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HalfMillennium/Vibewise.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HalfMillennium/Vibewise/issues"
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "https": "^1.0.0",
+    "node-localstorage": "^2.2.1",
+    "path": "^0.12.7",
+    "promise": "^8.1.0",
+    "querystring": "^0.2.0",
+    "scikit-learn": "^0.1.0",
+    "spotify-web-api-node": "^4.0.0",
+    "uuid": "^8.3.2"
   },
-  "homepage": "https://github.com/HalfMillennium/Vibewise#readme"
+  "engines": {
+    "node": "15.14.0"
+  }
 }
