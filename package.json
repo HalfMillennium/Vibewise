@@ -1,0 +1,20 @@
+{
+  "name": "vibewise",
+  "version": "1.0.0",
+  "description": "A web app that allows users to play a subsection of a selected playlist based on their mood. This mood is determined by a descriptive sentence entered by the user.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node core/server.js",
+    "heroku-postbuild": "cd www/client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HalfMillennium/Vibewise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HalfMillennium/Vibewise/issues"
+  },
+  "homepage": "https://github.com/HalfMillennium/Vibewise#readme"
+}
