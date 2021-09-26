@@ -19,7 +19,7 @@ import pickle
 """## Importing the dataset"""
 
 from sklearn.preprocessing import LabelEncoder
-dataset = pd.read_csv('xgb_imputed_semi_bin.csv', encoding='utf-8')
+dataset = pd.read_csv('xgb_imputed_semi_bin_genreless.csv', encoding='utf-8')
 #print(type(dataset['genre_1'].to_numpy()))
 #dataset['genre_1'] = LabelEncoder().fit_transform(dataset['genre_1'].to_numpy())
 X = dataset.iloc[:,2:-1]
@@ -27,19 +27,8 @@ X = dataset.iloc[:,2:-1]
 encoder = LabelEncoder()
 #print(X['genre_1'])
 #print(X)
-numpy_genre_1 = X['genre_1'].to_numpy()
-numpy_genre_2 = X['genre_2'].to_numpy()
-numpy_genre_3 = X['genre_3'].to_numpy()
 numpy_mood_1 = dataset.iloc[:,2:]['mood_1'].to_numpy()
 print(set(numpy_mood_1))
-enc_g1 = encoder.fit_transform(numpy_genre_1)
-X['genre_1'] = pd.Series(enc_g1)
-
-enc_g2 = encoder.fit_transform(numpy_genre_2)
-X['genre_2'] = pd.Series(enc_g2)
-
-enc_g3 = encoder.fit_transform(numpy_genre_3)
-X['genre_3'] = pd.Series(enc_g3)
 
 enc_m1 = encoder.fit_transform(numpy_mood_1)
 y = enc_m1
@@ -59,12 +48,6 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-print(X)
-
-"""# Encoding"""
-
-print("Train",y_train)
-print("Test",y_test)
 
 """## Training the Logistic Regression model on the Training set"""
 
@@ -73,9 +56,10 @@ eval_set = [(X_test, y_test)]
 model = XGBClassifier()
 #print("y-train",set(y_train))
 #print("y-test",set(y_test))
-model.fit(X_train,y_train,early_stopping_rounds=10,eval_metric="mlogloss",eval_set=[(X_test,y_test)],verbose=False)
+#model.fit(X_train,y_train,early_stopping_rounds=10,eval_metric="mlogloss",eval_set=[(X_test,y_test)],verbose=False)
 
 """## Pickle the Model"""
 
 filename = 'xgboost_model.sav'
-pickle.dump(model, open(filename, 'wb'))
+#pickle.dump(model, open(filename, 'wb'))
+pickle.dump(encoder, open('mood_encoder.sav', 'wb'))
