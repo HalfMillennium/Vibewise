@@ -3,12 +3,15 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var SpotifyWebApi = require('spotify-web-api-node');
-var redirectUri = 'http://localhost:8888/callback',
-    clID = process.env.CLIENT_ID,
-    clSEC = process.env.CLIENT_SECRET;
-var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state'];
+require('dotenv').config()
+
+var redirectUri = 'http://localhost:8888/callback';
+var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state', 'user-read-currently-playing'];
 var showDialog = true;
 var acc_token;
+
+clID = process.env.CLIENT_ID,
+clSEC = process.env.CLIENT_SECRET;
 // The API object we'll use to interact with the API
 var spotifyApi = new SpotifyWebApi({
   clientId : clID,
@@ -22,8 +25,29 @@ var track_ids;
 router.use(express.static('public'));
 
 router.get("/", function (request, response) {
+  // starts vibe engine
+  if(!request.session.v) {
+    var engine = require('child_process').exec('python vibe_engine.py', {
+      cwd: '/Users/percival/Documents/GitHub/Vibewise/flask'
+    }, function(error, stdout, stderr) {
+      if(error) {
+        console.log("Error:",error,"\n")
+      }
+      if(stderr) {
+        console.log("Stderr:",stderr,"\n")
+      }
+      //console.log("Vibe engine initiated:\n",stdout)
+    });
+    engine.stdout.pipe(process.stdout)
+    engine.on('exit', function() {
+      console.log("Vibe engine initiated.")
+    })
+    request.session.v = 1
+  }
+
   response.sendFile(path.resolve(__dirname + './../views/index.html'));
 });
+  
 
 router.get("/authorize", function (request, response) {
   var authorizeURL = spotifyApi.createAuthorizeURL(scopes, null, showDialog);
@@ -79,6 +103,10 @@ router.get("/gettone", function (request, response) {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
       console.log(`BODY: ${d.toString()}`);
+      if(d.toString() == 'no_tone') {
+        response.status(400).send("No tone detected! Try another phrase/sentence.")
+        response.end()
+      }
       response.send(d.toString());
     });
   })
@@ -119,13 +147,16 @@ router.get("/gettracks", function(request, response) {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
       // d = list of tracks
+      if(d == "INACTIVE") {
+        response.send(path.resolve("views/no_active.html"))
+      }
       track_ids = d
       response.send(track_ids)
     })
   })
 
   req.on('error', error => {
-    console.error(error)
+    console.error(error.message)
   })
 
   req.end()

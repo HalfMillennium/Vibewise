@@ -6,7 +6,7 @@ const constructorMethod = (app) => {
   app.use('/u', clientRoutes);
 
   app.use('*', (req, res) => {
-    res.sendStatus(500);
+    res.sendStatus(404);
   });
 };
 
