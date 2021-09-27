@@ -27,6 +27,7 @@ router.use(express.static('public'));
 
 router.get("/", function (request, response) {
   // starts vibe engine
+  /*
   if(!request.session.v) {
     var engine = require('child_process').exec('python vibe_engine.py', {
       cwd: '/Users/percival/Documents/GitHub/Vibewise/core/flask'
@@ -44,7 +45,7 @@ router.get("/", function (request, response) {
       console.log("Vibe engine initiated.")
     })
     request.session.v = 1
-  }
+  }*/
 
   response.sendFile(path.resolve(__dirname + './../views/index.html'));
 });
