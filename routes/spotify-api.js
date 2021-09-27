@@ -5,7 +5,8 @@ var path = require('path');
 var SpotifyWebApi = require('spotify-web-api-node');
 require('dotenv').config()
 
-var redirectUri = 'http://localhost:8888/callback';
+// if testing locally: use localhost:888
+var redirectUri = 'https://vibewise.herokuapp.com/callback';
 var scopes = ['user-top-read','streaming','user-read-private', 'user-modify-playback-state', 'user-read-currently-playing'];
 var showDialog = true;
 var acc_token;
