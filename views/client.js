@@ -74,7 +74,7 @@ $(function name() {
             mood = JSON.stringify(res);
             console.log("Resultant mood: " + mood);
             localStorage.setItem("mood", mood)
-            window.location.href = '/u/load'
+            window.location.href = 'https://aqueous-bastion-86228.herokuapp.com/gettone/u/load'
             //getTracks(mood.replace(/['"]+/g, ''));
           }
         }
