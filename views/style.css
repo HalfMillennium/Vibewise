@@ -1,0 +1,97 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 5vh 5vw;
+  }
+  
+  footer {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid lightgrey;
+  }
+  
+  .nicejob {
+    text-decoration: line-through;
+  }
+
+  /* Custom */
+  
+  html,
+  body { 
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    background: url('https://wallpaperaccess.com/full/1722876.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+  .trans-jumb {
+    background-color: transparent;
+  }
+
+  .bg-white {
+    background-color: #ffffff;
+  }
+
+  .text-white {
+    color: #ffffff;
+  }
+
+  .bg-black {
+    background-color: #212121;
+  }
+
+  .bg-trans {
+    background-color:rgba(0, 0, 0, 0);
+  }
+
+  .button-pad {
+    margin: 25px;
+  }
+
+  #moodInput {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  #submit-mood {
+    width: 100%;
+  }
+
+  .form-control::-webkit-input-placeholder {
+    color: lightgray;
+  }
+
+  .bg-white {
+    background-color: #808080;
+  }
+
+  .sub-art {
+    text-align: left;
+  }
+
+  .holder {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-box {
+    text-align:center;
+    margin-top:20px;
+ }
+
+
+  

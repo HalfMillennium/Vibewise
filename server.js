@@ -10,7 +10,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 var uuid = require('uuid');
 //var exphbs = require('express-handlebars');
-app.disable('etag');
+//app.disable('etag');
 app.use(session({secret: uuid.v4()}));
 app.use(express.json());
 
