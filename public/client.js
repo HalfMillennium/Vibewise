@@ -65,7 +65,7 @@ $(function name() {
       $.ajax({
         url : `https://aqueous-bastion-86228.herokuapp.com/gettone/${txt}`,
         type: "GET",
-        //data: { text: txt },
+        data: { text: txt },
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function(res){
