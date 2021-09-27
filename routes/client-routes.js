@@ -26,7 +26,7 @@ router.get("/load", function(request, response) {
 router.post("/tracks", function(request, response) {
   //console.log("Player page requested.");
   //response.sendFile(path.resolve('views/player_page.html'));
-  console.log("start req",request.body.track_info,"end req")
+  //console.log("start req",request.body.track_info,"end req")
   t = []
   try {
     for(track of request.body.track_info.responseJSON) {
