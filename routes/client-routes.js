@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var path = require('path');
-//app.use(express.static('public'));
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -19,7 +19,7 @@ router.get("/mood", function(request, response) {
 });
 
 router.get("/load", function(request, response) {
-  console.log("Loading...",path.resolve('views/loading_page.html'));
+  //console.log("Loading...",path.resolve('views/loading_page.html'));
   //response.sendFile(path.resolve('views/loading_page.html')); 
   response.sendFile(__dirname + "/views/loading_page.html")
 });
