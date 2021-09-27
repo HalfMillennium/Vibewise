@@ -5,7 +5,7 @@ var path = require('path');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-express.static(path.join(__dirname, '/public'));
+//express.static(path.join(__dirname, '/public'));
 /*
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');*/
@@ -15,12 +15,12 @@ router.use(express.json());
 
 router.get("/mood", function(request, response) {
   console.log("Mood prompt requested.");
-  response.sendFile('../views/moodprompt.html'); 
+  response.sendFile(path.resolve(_dirname, '/views/moodprompt.html')); 
 });
 
 router.get("/load", function(request, response) {
   console.log("Loading...");
-  response.sendFile('../views/loading_page.html'); 
+  response.sendFile(path.join(_dirname, '/views/loading_page.html')); 
 });
 
 router.post("/tracks", function(request, response) {
@@ -50,11 +50,11 @@ router.post("/tracks", function(request, response) {
 
 router.get("/player", function(req, res) {
     if(req.session.track_info && req.session.track_info.length > 5) {
-      res.sendFile('../views/static_page_2.html')
+      res.sendFile(path.join('/views/static_page_2.html'))
     } else if(req.session.track_info && req.session.track_info.length <= 5) {
-      res.sendFile('../views/not_many_recs.html')
+      res.sendFile(path.join(_dirname, '/views/not_many_recs.html'))
     } else {
-      res.sendFile('../views/no_recs_2.html')
+      res.sendFile(path.join(_dirname,'/views/no_recs_2.html'))
     }
 });
 
