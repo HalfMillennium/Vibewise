@@ -1,4 +1,4 @@
 
-/core/node_modules/
-/core/.env
+/node_modules/
+.env
 /flask/.env
