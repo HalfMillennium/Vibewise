@@ -5,12 +5,14 @@ const routeNum = '8888'
 //Loads the handlebars module
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const cors = require('cors');
 //Sets our app to use the handlebars engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 var uuid = require('uuid');
 //var exphbs = require('express-handlebars');
 //app.disable('etag');
+app.use(cors());
 app.use(session({secret: uuid.v4()}));
 app.use(express.json());
 
