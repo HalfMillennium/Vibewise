@@ -63,7 +63,7 @@ $(function name() {
       console.log(txt)
       var mood = ''
       $.ajax({
-        url : "/gettone",
+        url : "https://aqueous-bastion-86228.herokuapp.com/gettone",
         type: "GET",
         data: { text: txt },
         contentType: "application/json; charset=utf-8",
