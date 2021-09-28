@@ -140,9 +140,8 @@ router.get("/gettracks", function(request, response) {
   const get_request_args = querystring.stringify(parameters);
 
   const options = {
-    // replace this with 127.0.0.1 if testing locally
-    hostname: 'https://aqueous-bastion-86228.herokuapp.com',
-    //port: 5000,  --> You'll need this port if you're testing locally
+    hostname: 'aqueous-bastion-86228.herokuapp.com',
+    //port: 5000, --
     path: '/getfilter/?'+get_request_args,
     method: 'GET'
   }

@@ -7,7 +7,7 @@ app.use(cors())
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-// Will use handlebars for interactive player feature (in future builds)
+
 /*
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');*/
@@ -27,6 +27,9 @@ router.get("/load", function(request, response) {
 });
 
 router.post("/tracks", function(request, response) {
+  //console.log("Player page requested.");
+  //response.sendFile(path.resolve('views/player_page.html'));
+  //console.log("start req",request.body.track_info,"end req")
   t = []
   console.log("req body tracks:",request.body.track_info)
   try {
