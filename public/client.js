@@ -84,6 +84,7 @@ $(function name() {
         },
         complete: function(res) {
           window.location.href = '/u/load'
+          localStorage.getItem("mood")
           console.log("Completed:",res)
         }
       });
