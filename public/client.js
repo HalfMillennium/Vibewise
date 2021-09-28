@@ -59,6 +59,7 @@ $(function name() {
     // GET TONE route
     $('#submit-mood').click(function() {
       var txt = document.getElementById("moodInput").value;
+      document.getElementById("submit-mood").value = "Loading..."
       txt = txt.replaceAll(" ","_");
       console.log(txt)
       var mood = ''
@@ -69,7 +70,6 @@ $(function name() {
         success: function(res){
           // log returned mood
           console.log("MOOD raw:",res)
-          
           if(res) {
             mood = JSON.stringify(res);
             console.log("Resultant mood: " + mood);
