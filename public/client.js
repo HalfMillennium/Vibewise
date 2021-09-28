@@ -81,6 +81,9 @@ $(function name() {
             window.location.href = '/u/load'
             //getTracks(mood.replace(/['"]+/g, ''));
           }
+        },
+        complete: function(res) {
+          console.log("Completed:",res)
         }
       });
     });
