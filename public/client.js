@@ -82,6 +82,9 @@ $(function name() {
             //getTracks(mood.replace(/['"]+/g, ''));
           }
         },
+        error: function(err) {
+          console.log(err)
+        },
         complete: function(res) {
           window.location.href = '/u/load'
           //localStorage.setItem("mood", )
