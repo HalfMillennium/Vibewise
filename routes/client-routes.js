@@ -14,7 +14,7 @@ app.set('view engine', 'handlebars');*/
 
 //router.use(express.static('public'));
 router.use(express.json());
-
+app.options('/mood', cors())
 router.get("/mood", function(request, response) {
   console.log("Mood prompt requested.",path.resolve('views/moodprompt.html'));
   response.sendFile(path.resolve('views/moodprompt.html')); 

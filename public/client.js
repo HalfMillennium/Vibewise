@@ -65,9 +65,13 @@ $(function name() {
       $.ajax({
         url : `https://aqueous-bastion-86228.herokuapp.com/gettone/${txt}`,
         type: "GET",
-        data: { text: txt },
+        crossDomain: true,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
+        headers: {
+          "accept": "application/json",
+          "Access-Control-Allow-Origin":"*"
+        },
         success: function(res){
           // log returned mood
           if(res) {
