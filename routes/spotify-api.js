@@ -139,7 +139,7 @@ router.get("/gettracks", function(request, response) {
   const get_request_args = querystring.stringify(parameters);
 
   const options = {
-    hostname: 'https://aqueous-bastion-86228.herokuapp.com',
+    hostname: 'aqueous-bastion-86228.herokuapp.com',
     //port: 5000,
     path: '/getfilter/?'+get_request_args,
     method: 'GET'
