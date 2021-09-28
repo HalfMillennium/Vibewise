@@ -31,6 +31,7 @@ router.post("/tracks", function(request, response) {
   //response.sendFile(path.resolve('views/player_page.html'));
   //console.log("start req",request.body.track_info,"end req")
   t = []
+  console.log("req body tracks:",request.body.track_info)
   try {
     for(track of request.body.track_info.responseJSON) {
       t.push({
