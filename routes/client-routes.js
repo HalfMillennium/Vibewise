@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var path = require('path');
+var cors = require('cors');
+app.use(cors())
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 

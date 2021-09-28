@@ -11,7 +11,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 var uuid = require('uuid');
 //var exphbs = require('express-handlebars');
-//app.disable('etag');
+app.use(cors());
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", '*');
   res.header("Access-Control-Allow-Credentials", true);
