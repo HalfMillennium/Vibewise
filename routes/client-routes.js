@@ -22,8 +22,8 @@ router.get("/mood", function(request, response) {
 
 router.get("/load", function(request, response) {
   //console.log("Loading...",path.resolve('views/loading_page.html'));
-  //response.sendFile(path.resolve('views/loading_page.html')); 
-  response.sendFile(__dirname + "/views/loading_page.html")
+  response.sendFile(path.resolve('views/loading_page.html')); 
+  //response.sendFile(__dirname + "/views/loading_page.html")
 });
 
 router.post("/tracks", function(request, response) {
