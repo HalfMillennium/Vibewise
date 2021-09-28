@@ -67,6 +67,8 @@ $(function name() {
         type: "GET",
         crossDomain: true,
         contentType: "application/json; charset=utf-8",
+        jsonp: false,
+        jsonpCallback: 'alert',
         dataType: "jsonp",
         headers: {
           "accept": "application/json",
