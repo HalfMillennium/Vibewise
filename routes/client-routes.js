@@ -40,6 +40,7 @@ router.post("/tracks", function(request, response) {
       })
     }
   } catch(e) {
+    console.log(e)
     t = undefined
     response.end()
   }
