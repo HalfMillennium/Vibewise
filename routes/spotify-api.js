@@ -180,7 +180,7 @@ router.get("/gettracks", function(request, response) {
   getJsonFromJsonP(function (err, data) {
     console.log('data count', data.count);
 });
-
+/*
   const req = http.request(options, res => {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
@@ -198,7 +198,7 @@ router.get("/gettracks", function(request, response) {
   })
 
   req.end()
-  
+  */
 });
 
 
