@@ -65,24 +65,27 @@ $(function name() {
       $.ajax({
         url : `https://aqueous-bastion-86228.herokuapp.com/gettone/${txt}`,
         type: "GET",
-        crossDomain: true,
-        contentType: "application/json; charset=utf-8",
-        jsonp: false,
-        jsonpCallback: 'alert',
+        //crossDomain: true,
+        //contentType: "application/json; charset=utf-8",
+        //jsonp: true,
+        //jsonpCallback: 'alert',
+        //data: { text: txt },
         dataType: "jsonp",
-        headers: {
-          "accept": "application/json",
-          "Access-Control-Allow-Origin":"*"
-        },
+        //headers: {
+        //  "accept": "application/json",
+        //  "Access-Control-Allow-Origin":"*"
+        //},
         success: function(res){
           // log returned mood
+          console.log("MOOD raw:",res)
+          /*
           if(res) {
             mood = JSON.stringify(res);
             console.log("Resultant mood: " + mood);
             localStorage.setItem("mood", mood)
             window.location.href = '/u/load'
             //getTracks(mood.replace(/['"]+/g, ''));
-          }
+          }*/
         },
         error: function(err) {
           console.log(err)
