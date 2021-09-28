@@ -67,7 +67,7 @@ $(function name() {
         type: "GET",
         crossDomain: true,
         contentType: "application/json; charset=utf-8",
-        dataType: "json",
+        dataType: "jsonp",
         headers: {
           "accept": "application/json",
           "Access-Control-Allow-Origin":"*"
