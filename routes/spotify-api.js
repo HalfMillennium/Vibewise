@@ -145,12 +145,44 @@ router.get("/gettracks", function(request, response) {
     method: 'GET'
   }
 
+  var getJsonFromJsonP = function (url, callback) {
+    http.request(options, res => {
+      console.log(`statusCode: ${res.statusCode}`)
+      res.on('data', (d) => {
+        // d = list of tracks
+        if (res.statusCode == 200) {
+          //if you don't know for sure that you are getting jsonp, then i'd do something like this
+          json = {}
+          try
+          {
+            d = JSON.parse(d);
+          }
+          catch(e)
+          {
+              var startPos = d.indexOf('({');
+              var endPos = d.indexOf('})');
+              var jsonString = d.substring(startPos+1, endPos+1);
+              d = JSON.parse(jsonString);
+          }
+          callback(null, json);
+        } else {
+          callback(error);
+        }
+        if(d == "INACTIVE") {
+          response.send(path.resolve("/no_active.html"))
+        }
+        track_ids = d
+        response.send(track_ids)
+      })
+    })
+  }
+
   const req = http.request(options, res => {
     console.log(`statusCode: ${res.statusCode}`)
     res.on('data', (d) => {
       // d = list of tracks
       if(d == "INACTIVE") {
-        response.send(path.resolve("views/no_active.html"))
+        response.send(path.resolve("/no_active.html"))
       }
       track_ids = d
       response.send(track_ids)
