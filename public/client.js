@@ -71,6 +71,7 @@ $(function name() {
         //jsonpCallback: 'alert',
         //data: { text: txt },
         dataType: "jsonp",
+        data: {callback: "alert"},
         //headers: {
         //  "accept": "application/json",
         //  "Access-Control-Allow-Origin":"*"
