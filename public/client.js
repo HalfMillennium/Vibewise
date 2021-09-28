@@ -89,6 +89,9 @@ $(function name() {
         },
         error: function(err) {
           console.log(err)
+        },
+        complete: function(res) {
+          console.log(res)
         }
       });
     });
