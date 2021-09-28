@@ -66,7 +66,6 @@ $(function name() {
         url : `https://aqueous-bastion-86228.herokuapp.com/gettone/${txt}`,
         type: "GET",
         dataType: "jsonp",
-        data: {callback: "alert"},
         success: function(res){
           // log returned mood
           console.log("MOOD raw:",res)
