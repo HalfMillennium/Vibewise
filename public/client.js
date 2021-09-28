@@ -69,14 +69,14 @@ $(function name() {
         success: function(res){
           // log returned mood
           console.log("MOOD raw:",res)
-          /*
+          
           if(res) {
             mood = JSON.stringify(res);
             console.log("Resultant mood: " + mood);
             localStorage.setItem("mood", mood)
             window.location.href = '/u/load'
             //getTracks(mood.replace(/['"]+/g, ''));
-          }*/
+          }
         },
         error: function(err) {
           console.log(err)
