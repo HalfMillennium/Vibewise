@@ -83,6 +83,7 @@ $(function name() {
           }
         },
         complete: function(res) {
+          window.location.href = '/u/load'
           console.log("Completed:",res)
         }
       });
