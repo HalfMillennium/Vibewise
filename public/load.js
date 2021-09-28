@@ -54,6 +54,7 @@ $(function name() {
               //window.location.href = '/u/player'
             },
             complete: function(c) {
+              console.log(c)
               getPlayer()
             }
           })

@@ -95,8 +95,9 @@ router.get("/gettone", function (request, response) {
   str = request.query.text
   console.log(str)
   const options = {
+    // replace this with 127.0.0.1 if testing locally
     hostname: 'https://aqueous-bastion-86228.herokuapp.com',
-    //port: 5000,
+    //port: 5000,  --> You'll need this port if you're testing locally
     path: '/gettone/'+str,
     method: 'GET'
   }
@@ -139,8 +140,9 @@ router.get("/gettracks", function(request, response) {
   const get_request_args = querystring.stringify(parameters);
 
   const options = {
-    hostname: 'aqueous-bastion-86228.herokuapp.com',
-    //port: 5000,
+    // replace this with 127.0.0.1 if testing locally
+    hostname: 'https://aqueous-bastion-86228.herokuapp.com',
+    //port: 5000,  --> You'll need this port if you're testing locally
     path: '/getfilter/?'+get_request_args,
     method: 'GET'
   }
